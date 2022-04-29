@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html theme="light" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+  <title>ZooApp</title>
+</head>
+<body>
+  <h1 class="visually-hidden">Online Zoo</h1>
+  <header class="header">
+    <div class="header-wrapper">
+    <div class="logo"><a href="../../pages/landing/index.html">
+      <svg width="59" height="42" viewBox="0 0 59 42" fill="var(--logo)" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.64844 18.4297H17.3145V23H1.16016V19.6953L9.59766 8.55078H1.5293V3.98047H17.1211V7.17969L8.64844 18.4297ZM19.1602 13.3145C19.1602 11.416 19.5293 9.72852 20.2676 8.25195C21.0059 6.76367 22.0664 5.62109 23.4492 4.82422C24.832 4.02734 26.4551 3.62891 28.3184 3.62891C31.166 3.62891 33.4102 4.51367 35.0508 6.2832C36.6914 8.04102 37.5117 10.4375 37.5117 13.4727V13.6836C37.5117 16.6484 36.6855 19.0039 35.0332 20.75C33.3926 22.4844 31.166 23.3516 28.3535 23.3516C25.6465 23.3516 23.4727 22.543 21.832 20.9258C20.1914 19.2969 19.3066 17.0938 19.1777 14.3164L19.1602 13.3145ZM25.084 13.6836C25.084 15.4414 25.3594 16.7305 25.9102 17.5508C26.4609 18.3711 27.2754 18.7812 28.3535 18.7812C30.4629 18.7812 31.541 17.1582 31.5879 13.9121V13.3145C31.5879 9.9043 30.498 8.19922 28.3184 8.19922C26.3379 8.19922 25.2656 9.66992 25.1016 12.6113L25.084 13.6836ZM39.375 13.3145C39.375 11.416 39.7441 9.72852 40.4824 8.25195C41.2207 6.76367 42.2812 5.62109 43.6641 4.82422C45.0469 4.02734 46.6699 3.62891 48.5332 3.62891C51.3809 3.62891 53.625 4.51367 55.2656 6.2832C56.9062 8.04102 57.7266 10.4375 57.7266 13.4727V13.6836C57.7266 16.6484 56.9004 19.0039 55.248 20.75C53.6074 22.4844 51.3809 23.3516 48.5684 23.3516C45.8613 23.3516 43.6875 22.543 42.0469 20.9258C40.4062 19.2969 39.5215 17.0938 39.3926 14.3164L39.375 13.3145ZM45.2988 13.6836C45.2988 15.4414 45.5742 16.7305 46.125 17.5508C46.6758 18.3711 47.4902 18.7812 48.5684 18.7812C50.6777 18.7812 51.7559 17.1582 51.8027 13.9121V13.3145C51.8027 9.9043 50.7129 8.19922 48.5332 8.19922C46.5527 8.19922 45.4805 9.66992 45.3164 12.6113L45.2988 13.6836Z" fill="var(--logo)"/>
+        <path d="M1.45703 35.1572C1.45703 34.208 1.6416 33.3643 2.01074 32.626C2.37988 31.8818 2.91016 31.3105 3.60156 30.9121C4.29297 30.5137 5.10449 30.3145 6.03613 30.3145C7.45996 30.3145 8.58203 30.7568 9.40234 31.6416C10.2227 32.5205 10.6328 33.7188 10.6328 35.2363V35.3418C10.6328 36.8242 10.2197 38.002 9.39355 38.875C8.57324 39.7422 7.45996 40.1758 6.05371 40.1758C4.7002 40.1758 3.61328 39.7715 2.79297 38.9629C1.97266 38.1484 1.53027 37.0469 1.46582 35.6582L1.45703 35.1572ZM4.41895 35.3418C4.41895 36.2207 4.55664 36.8652 4.83203 37.2754C5.10742 37.6855 5.51465 37.8906 6.05371 37.8906C7.1084 37.8906 7.64746 37.0791 7.6709 35.4561V35.1572C7.6709 33.4521 7.12598 32.5996 6.03613 32.5996C5.0459 32.5996 4.50977 33.335 4.42773 34.8057L4.41895 35.3418ZM16.0982 30.4902L16.1949 31.6064C16.8511 30.7451 17.7564 30.3145 18.9107 30.3145C19.9009 30.3145 20.6392 30.6104 21.1255 31.2021C21.6177 31.7939 21.8726 32.6846 21.8902 33.874V40H18.9195V33.9971C18.9195 33.5166 18.8228 33.165 18.6295 32.9424C18.4361 32.7139 18.0845 32.5996 17.5748 32.5996C16.9947 32.5996 16.564 32.8281 16.2828 33.2852V40H13.3209V30.4902H16.0982ZM28.1027 40H25.132V26.5H28.1027V40ZM34.4997 40H31.529V30.4902H34.4997V40ZM31.3532 28.0381C31.3532 27.6162 31.5055 27.2705 31.8102 27.001C32.1149 26.7314 32.5104 26.5967 32.9968 26.5967C33.4831 26.5967 33.8786 26.7314 34.1833 27.001C34.488 27.2705 34.6403 27.6162 34.6403 28.0381C34.6403 28.46 34.488 28.8057 34.1833 29.0752C33.8786 29.3447 33.4831 29.4795 32.9968 29.4795C32.5104 29.4795 32.1149 29.3447 31.8102 29.0752C31.5055 28.8057 31.3532 28.46 31.3532 28.0381ZM40.4924 30.4902L40.5891 31.6064C41.2454 30.7451 42.1506 30.3145 43.3049 30.3145C44.2952 30.3145 45.0334 30.6104 45.5198 31.2021C46.012 31.7939 46.2668 32.6846 46.2844 33.874V40H43.3137V33.9971C43.3137 33.5166 43.217 33.165 43.0237 32.9424C42.8303 32.7139 42.4788 32.5996 41.969 32.5996C41.3889 32.5996 40.9582 32.8281 40.677 33.2852V40H37.7151V30.4902H40.4924ZM53.9734 40.1758C52.5145 40.1758 51.3338 39.7422 50.4314 38.875C49.5291 38.002 49.0779 36.8682 49.0779 35.4736V35.2275C49.0779 34.2549 49.2566 33.3965 49.6141 32.6523C49.9773 31.9082 50.5047 31.334 51.1961 30.9297C51.8875 30.5195 52.7078 30.3145 53.657 30.3145C54.993 30.3145 56.0477 30.7305 56.8211 31.5625C57.5945 32.3887 57.9813 33.543 57.9813 35.0254V36.1768H52.0926C52.198 36.71 52.4295 37.1289 52.7869 37.4336C53.1443 37.7383 53.6072 37.8906 54.1756 37.8906C55.1131 37.8906 55.8455 37.5625 56.3729 36.9062L57.7264 38.5059C57.3572 39.0156 56.8328 39.4229 56.1531 39.7275C55.4793 40.0264 54.7527 40.1758 53.9734 40.1758ZM53.6395 32.5996C52.7723 32.5996 52.2566 33.1738 52.0926 34.3223H55.0809V34.0938C55.0926 33.6191 54.9725 33.2529 54.7205 32.9951C54.4686 32.7314 54.1082 32.5996 53.6395 32.5996Z" fill="var(--logo)"/>
+      </svg>
+    </a></div>
+    <ul class="header-nav">
+      <li><a href="../../pages/landing/index.html" class="nav-link active">About</a></li>
+      <li><a href="../zoos/panda/index.html" class="nav-link">Zoos</a></li>
+      <li><a href="../map/index.html" class="nav-link">Map</a></li>
+      <li><a href="#notif" class="nav-link">Contact Us</a></li>
+      <li><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp?node-id=0%3A1" class="nav-link">Design</a></li>
+    </ul>
+    <div class="header-right">
+      <label class="theme">
+        <input type="checkbox">
+        <span class="switch"></span>
+      </label>
+      <div class="burger-nav">
+        <div class="burger-line"></div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main class="main">
+  <section class="hero">
+    <div class="hero-wrapper">
+      <div class="hero-text">Watch your favorite animal online</div>
+      <a href="../zoos/panda/index.html" class="top-button watch-button">watch online</a>
+      <div class="sidebar">
+        <a href="https://www.instagram.com/"><img src="../../assets/icons/inst.svg" alt="instagram" class="social"></a>
+        <a href="https://twitter.com/"><img src="../../assets/icons/twitter.svg" alt="twitter" class="social"></a>
+        <a href="https://www.youtube.com/"><img src="../../assets/icons/youtube.svg" alt="youtube" class="social"></a>
+        <a href="https://vk.com/"><img src="../../assets/icons/vk.svg" alt="vk" class="social"></a>
+      </div>
+      <div class="hero-slider">
+        <div class="hero-slider-container">
+          <div class="watch-your-animal-slider-container">
+            <div class="watch-your-animal-slider">
+              <div class="slider-card">
+                <img src="../../assets/images/hawk.jpg" alt="hawk" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/hawk/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card slider-card-active">
+                <img src="../../assets/images/panda.jpg" alt="panda" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/panda/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card">
+                <img src="../../assets/images/monkey.jpg" alt="monkey" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/monkey/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card">
+                <img src="../../assets/images/alligator.jpg" alt="alligator" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/alligator/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card">
+                <img src="../../assets/images/fox.jpg" alt="fox" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/panda/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card">
+                <img src="../../assets/images/sloth.jpg" alt="sloth" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/hawk/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card">
+                <img src="../../assets/images/elephant.jpg" alt="elephant" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/monkey/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+              <div class="slider-card">
+                <img src="../../assets/images/jaguar.jpg" alt="jaguar" class="watch-your-animal-slider-img">
+                <div class="content">
+                  <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                  <a href="../zoos/alligator/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch online"></a>
+                  <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt=donate"></a>
+                </div>
+              </div>
+          </div>
+          </div>
+          <div class="subslider">
+            <output><span class="is">02/</span><span class="from">08</span></output>
+            <input type="range" min="1" max="8" step="1" value="2" class="input-range">
+          </div>
+          <div class="background-container">
+            <div class="scale">
+              <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span> -->
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="how-it-works-wrapper">
+      <div class="text-wrapper">
+        <h2 class="block-title">How it works?</h2>
+        <p class="subtitle">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects, including providing veterinary support and raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+      </div>
+      <div class="how-it-works-slider">
+        <div class="how-it-works-slider-card"></div>
+      </div>
+      <div class="subslider">
+        <output><span class="is">01/</span><span class="from">04</span></output>
+        <input type="range" min="1" max="4" step="1" value="1" class="input-range">
+      <a href="../zoos/panda/index.html" class="watch-button">watch online</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tips">
+    <div class="tips-wrapper">
+      <div class="tip">
+        <img src="../../assets/icons/inspire.svg" alt="inspire icon" class="tip-img">
+        <h3 class="title">What inspires us?</h3>
+        <p class="subtitle">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects.</p>
+      </div>
+      <div class="tip">
+        <img src="../../assets/icons/mission.svg" alt="mission icon" class="tip-img">
+        <h3 class="title">Our mission</h3>
+        <p class="subtitle">Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. </p>
+      </div>
+      <div class="tip">
+        <img src="../../assets/icons/believe.svg" alt="believe icon" class="tip-img">
+        <h3 class="title">What we believe in?</h3>
+        <p class="subtitle">Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pets-in-zoo">
+    <div class="pets-in-zoo-wrapper">
+      <h3 class="block-title">Pets in Zoo</h3>
+      <div class="pets-in-zoo-slider">
+        <div class="arrow-container">
+          <svg class="slider-arrow pets-slider-prev" width="30" height="30" viewBox="0 0 30 30" fill="var(--arrow)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.6663 16.1706L20.0167 29.5207C20.3255 29.8298 20.7376 30 21.1772 30C21.6167 30 22.0289 29.8298 22.3376 29.5207L23.3208 28.5378C23.9605 27.8973 23.9605 26.8564 23.3208 26.2169L12.1102 15.0062L23.3332 3.78314C23.642 3.47412 23.8125 3.06217 23.8125 2.6229C23.8125 2.18315 23.642 1.7712 23.3332 1.46194L22.3501 0.479263C22.0411 0.17024 21.6291 0 21.1896 0C20.7501 0 20.3379 0.17024 20.0291 0.479263L6.6663 13.8416C6.35679 14.1516 6.18679 14.5655 6.18777 15.0055C6.18679 15.4472 6.35679 15.8608 6.6663 16.1706Z" fill="var(--arrow)"/>
+          </svg>  
+        </div>
+        <div class="pets-slider-container">
+          <div class="pets">
+            <div class="pets-in-zoo-slider-card pets-in-zoo-slider-active-card">
+              <img src="../../assets/images/panda.jpg" alt="panda" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/panda/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/hawk.jpg" alt="hawk" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/hawk/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/monkey.jpg" alt="monkey" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/monkey/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/alligator.jpg" alt="alligator" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/alligator/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/panda.jpg" alt="panda" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/panda/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/hawk.jpg" alt="hawk" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/hawk/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/monkey.jpg" alt="monkey" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/monkey/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+            <div class="pets-in-zoo-slider-card">
+              <img src="../../assets/images/alligator.jpg" alt="alligator" class="pets-in-zoo-slider-img">
+              <div class="content">
+                <p class="text">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                <a href="../zoos/alligator/index.html" class="content-button"><img src="../../assets/icons/sub-watch.svg" alt="watch"></a>
+                <a href="#" class="content-button"><img src="../../assets/icons/sub-donate.svg" alt="donate"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-container">
+          <svg class="slider-arrow pets-slider-next" width="30" height="30" viewBox="0 0 30 30" fill="var(--arrow)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="var(--arrow)"/>
+          </svg> 
+        </div>
+      </div>
+      <output><span class="is">01/</span><span class="from">08</span></output>
+      <input type="range" min="1" max="8" step="1" value="1" class="input-range">
+      <button class="usuall-button"><a href="../map/index.html">choose your favorite</a></button>
+    </div>
+  </section>
+
+  <section class="pay">
+    <div class="pay-wrapper">
+      <h2 class="block-title">Pay and feed</h2>
+      <p class="subtitle">The opportunity to easily and naturally (but as often as possible) donate to the needs of animals that you like.</p>
+      <div class="pay-container">
+        <div class="circle">
+          <img src="../../assets/icons/pay.svg" alt="credit card" class="circle-icon">
+          <h3 class="circle-text">You pay with a 
+            VISA card</h3>
+        </div>
+        <div class="arrow"></div>
+        <div class="circle">
+          <img src="../../assets/icons/zoo.svg" alt="zoo" class="circle-icon">
+          <h3 class="circle-text">Payment goes 
+            to the Zoo</h3>
+        </div>
+        <div class="arrow"></div>
+        <div class="circle">
+          <img src="../../assets/icons/panda.svg" alt="panda" class="circle-icon">
+          <h3 class="circle-text">Panda gets 
+            the bamboo</h3>
+          </div>
+      </div>
+      <button class="usuall-button">donate</button>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials-wrapper">
+      <h3 class="block-title">Testimonials</h3>
+      <div class="testimonials-slider">
+        <div class="arrow-container">
+          <svg class="slider-arrow" width="30" height="30" viewBox="0 0 30 30" fill="var(--arrow)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.6663 16.1706L20.0167 29.5207C20.3255 29.8298 20.7376 30 21.1772 30C21.6167 30 22.0289 29.8298 22.3376 29.5207L23.3208 28.5378C23.9605 27.8973 23.9605 26.8564 23.3208 26.2169L12.1102 15.0062L23.3332 3.78314C23.642 3.47412 23.8125 3.06217 23.8125 2.6229C23.8125 2.18315 23.642 1.7712 23.3332 1.46194L22.3501 0.479263C22.0411 0.17024 21.6291 0 21.1896 0C20.7501 0 20.3379 0.17024 20.0291 0.479263L6.6663 13.8416C6.35679 14.1516 6.18679 14.5655 6.18777 15.0055C6.18679 15.4472 6.35679 15.8608 6.6663 16.1706Z" fill="var(--arrow)"/>
+          </svg>  
+        </div>
+        <div class="testimonials-card">
+          <div class="avatar"><img src="../../assets/icons/avatar1.svg" alt="avatar" class="avatar-img"></div>
+          <h4 class="title">Nastya Sidorova</h4>
+          <div class="subtitle">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</div>
+        </div>
+        <div class="testimonials-card">
+          <div class="avatar"><img src="../../assets/images/avatar2.jpg" alt="avatar" class="avatar-img"></div>
+          <h4 class="title">Vlad Kim</h4>
+          <div class="subtitle">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</div>
+        </div>
+        <div class="arrow-container">
+          <svg class="slider-arrow" width="30" height="30" viewBox="0 0 30 30" fill="var(--arrow)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="var(--arrow)"/>
+          </svg> 
+        </div>
+      </div>
+      <output><span class="is">01/</span><span class="from">08</span></output>
+      <input type="range" min="1" max="8" step="1" value="1" class="input-range">
+      <button class="usuall-button">leave feedback</button>
+    </div>
+  </section>
+
+  <section class="map">
+    <div class="map-wrapper">
+      <h3 class="block-title">Map</h3>
+      <div class="map-map">
+        <svg class="map-icon" width="1200" height="498" viewBox="0 0 1200 500" fill="none" stroke="var(--map)" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M743 213h0v1l3-1h5l2-2 3-2 2-2 1 1v3h-2v2h1l-1 1v2l-1 1v1l-1 1-11-2-1-3v-1zM771 172l4 2 3-1v-1l3-1 1-1 1-3 2-1 1-1 2 1h2l3 1h1l3-1 1 1 1-2h2v-2l1-1 2 1v1h1l1 3 1 1h1l2-1 1-1h6l1 1h-2l-1 1-4 1h-4l-1 2 1 1v2l-1 2v1l-1 1h-3l2 2-2 1-1 3v2l-1 1-1-1-3 1v1h-3l-1 2v3l-4 1h-3v1l-3-1-3 1-6-2 3-3-1-2-3-1v-2l-2-3 2-2-2-1 1-2v-5zM631 150v1l1 2 1 1v1h-1v1l-2 2h0v-1l-2-1-1-2 1-2v-1l-1-1v-1l1-2 1 1h1v1h1v1zM709 153l5-1v1l2 1-1 1 2 1-1 1 2 1 1 1 1 2h-1l-2-2h0-2l-1-1h0l-2-1-2-1v-2l-1-1zM620 320l1 3 1 2 1 1 1 2h3l1-1 2 1v-1l1-2h3v-1h2l-1 1h5v8l1 1v5l1-1h5l1 1-1 2 1 2-1 1v1h-7v11l2 3 2 3-6 1h-9l-2-2h-15 0l-2-1h-5l-1 1-1-2 1-4 1-3v-1l2-4v-1l2-2 2-2v-5l-1-1-1-2-1-2v-1l1-1-1-4v-2l-2-2v-1l2-1 1 1 1-1h10zm-13-1l-1 1-1-3 1-1 1-1 2 1-2 1v2zM353 496h-3l-2-1h-5l-2-8 1 2 3 2 5 2 4 1-1 2zm-19-118l3 2 1-2h4l7 6 3 1 5 2 3 2 1 1-3 6 4 1h6l3-3 1-3 1-1 2 2v3l-2 2-2 2-4 3-4 5-1 3v12l4 3v2l3 2v2l-3 4-5 2-6 1h-4l1 2v2l1 2-2 1-3 1-4-1-1 1 1 3 3 1 1-1 2 2-3 1-3 2 1 4-1 2h-3l-2 2v2l3 3 4 1-1 3-3 2-1 4-3 1-1 2 2 4 3 2h-1l-4-1h-7l-2-2-1-3h-2l-2-1-1-4 2-1 1-3-1-2 1-3v-4l-1-2 1-1v-1l-2-1 1-2-2-1-2-4 1-1-1-4v-7l2-1-2-4v-3l2-2-1-3 2-4-1-3-1-1-2-6 1-4v-6l2-4 2-2-1-1 1-1-1-6 4-2 1-4-1-1 3-3 4 1zM618 128v1h-2l1 1-1 2-1 1h-3l-1 1h-3l-5-1-1-2-3 1v1l-2-1h-2l-1-1h0v-1h1l2 1v-1h3l2-1h2l1 1h0v-3h1l1-2 2 1 2-1h1l3 1 1-1 2 1v2zM1052 445l3 1 2-1h5l-2 4-1 1-2 3-1-1-3 3h-1l-2-1v-5l-1-3 1-2 2 1zm19-97l1 3 2-1 1 1 2 2-1 1v3l1 2h0l1 3-1 2 1 3 3 2 3 1 2 2-1 1 2 2v4l2-1 1 2 1-1v4l2 2 1 1 2 3v5l-1 2 1 3-1 4-1 1-2 3-1 2-1 3-3 3-3 2-2 3-2 1-2 4-2 1-2 3-1 2v2l-3 1h-4l-3 1-2 2-3 1-2-1-2-1 1-2-2 1-4 3-3-1-1-1h-2l-3-1-1-2v-5l-1-1-4-1 2-2v-2l-2 2-4 1 3-2 1-2 2-2v-3l-3 4-3 1-2 3-2-2v-2l-1-2-1-2v-1l-3-2h-3l-3-2-6 1-5 1-4 1h-3l-4 2-3 1-2 2-1 1h-13l-3 2h-1l-2 1-2 1h-5l-3-2-1-1v-2h2l1-1v-2l1-2v-2l-1-4v-2l1-2-1-2v-1l-1-2v-2l-1-3-1-2 2 2-1-4 2 2v1l1-2-1-3-1-1v-3l1-1 1-2v-2l2-2v2l2-2 3-1 2-2 3-1h2l3-1 2-1h1l1-1h2l4-1 2-1 1-2 2-2 1-1v-2l3-3 1 3 2-1-1-2 1-1h1l1-2 2-2 1-1 2-1v-1h2v-1h2l1-1 3 2 1 2h3l2 1-1-2 2-3 2-1v-1l1-2 3-1h1l3-1 1-1-3-2h2l2 1 2 1 3 1h1l2 1 2-1h2v-1l2 2-1 2-2 2h-1v1l-1 2-1 2v1l2 2 3 1 1 1 3 2h1l1 1 1 1 3 1 2-1 1-2 1-1 1-2 2-3-1-2 1-1v-5h1v-2l1-1 1-2v-1l1-2 1 2v2l1 1v1l1 2v3z" fill="var(--map)"/>
+            <path d="M714 158l1 1h2l2 2h-3l-2-2v-1h0zm8-6l1 1 1-1 1-2 2 2 3 3h1l1 1h-2l-1 3v1l-1 1v2h-1l-2-2 1-2-1-1-1 1-4 2-1-2-1-1-2-1 1-1-2-1 1-1-2-1v-1h0l3 1h2l-2-2 1-1h1l3 2zM625 139h2l-1 2 2 1-1 2h-1v1h-1l-1 2-3-1-1-2h-1l-2-2-1-1-1-1v-2l1 1 1-1h2l3 1h3zM887 221l1 2h-2l1 3-1-2-1-2-1-2-1-2h-4l1 2-1 2-2-1h0-2l-1-3-2-3v-2l-2-1 1-1 2-2-3-1 1-3 3 2h2v2l4 1h5l-1 3-2 1-1 2 3 1v-2h1l2 6zM573 116l2 1 3-1 2 1 2 1v3h-1v2l-3-2h-2l-2-1-2-2h-1l-1-1 3-1zM552 265l-2-1h-2l-1 1-2-1v-1l-2-1v-2l1-1v-1l3-3v-3l1-1 2 1 1-1 1-1 2-1 1-2 3-1 2-1 1 1h3l-1 2 1 1 2 3v2h4v3l-1 1h-2v2h-15v5zM638 142l1 1h4l5 1 1-1 4-1 3 1 2 1-2 1-1 3 1 2-3-1-3 1v2h-3l-2-1-3 1h-3v-2l-2-1 1-1h-1l1-2 1-1-2-1v-1l1-1zM667 315v-4l-1-2 2 1 1-2h2v1l1 1v1l-1 1-2 2-1 1h-1z" fill="var(--map)"/>
+            <path d="M572 277h-3l-1-2v-8l-1-1v-2l-1-1-1-1v-2h2v-2h2l1-1 1-1h1l3 2v1l1 2-1 2h0l-1 3-1 1-1 2v8zM969 283l1-1 3-2v4h-2v1l-2-2zM342 378h-4l-1 2-3-2-4-1-3 3-2 1-2-5-3-4 1-4-2-1v-3l-2-2 2-4-2-3 1-1-1-2 1-1v-6l1-1-4-6 3 1 2-1 1-1 3-1 2-1 4-1v6l4 4h4l2 2h2l2 1h2l2 1v2l1 1v2h-1l2 4h6v2l1 2 2 1v5l-1 1 1 2-1 1-1-1-3-2h-3l-6 1-2 3v2l-1 4h0z" fill="var(--map)"/>
+            <path d="M363 407l4-5 4-3 2-2 2-2v-3l-2-2-1 1v-6l-1-1-1 1h-2v-2l-1-3v-1l-3-1-1 1-4-1v-5l-1-2 1-1-1-2 1-1v-5l-2-1-1-2v-2h-6l-2-4h1v-2l-1-1v-2l-2-1h-2l-2-1h-2l-2-2h-4l-4-4v-6l-4 1-2 1-3 1-1 1-2 1-3-1-2 1-1-1v-5l-3 2h-3l-2-2h-2l1-2-2-2-2-3 1-1v-1l2-1v-2l1-1v-2l4-2 3-1v-1l3 1 2-10v-2l-1-2-1-1v-3h3v-1l-2-1v-2h6l2-1 1 1v2h1l2 2 3-1v-1h3l2-1v-2l3-1h-1l-3-1v-4l-2-1 1-1 3 1 3 1 1-1 2-1 4-1 2-1-1-1h3l-1 2 1 1 1 1-1 1v3l1 2v2l2 2h2v-1h1l2-1 1-1 2 1 1-1 2 1v-3l1 1 2-1 2 1 2 1 1-1h0l1 1h2l1-2 1-2 2-4h2v2l2 6 2 1v3l-2 2 1 2h6v4l3-3 4 2 6 2 2 2-1 2 5-1 7 2 5-1 5 3 5 4 2 1 4 1 1 1 1 4 1 2-2 6-1 3-5 5-2 4-3 3h-1l-1 2 1 7-1 6v2l-1 1-1 5-3 5v3l-3 2-1 2h-4l-5 1-2 2-4 1-4 3-3 3v3l1 2-1 4v1l-3 2-3 7-3 2-2 2-1 4-2 2-1-2 1-2-2-3-3-2-4-2h-1l-4-3-2 1zM291 215h-1l-1-2-1-1 1-2h1l1 3v2zm0-10h-4v-1h4v1zm3 0l-1 2h0v-2l-2-2h0l3 2zM881 200l2 2v2h-8l-4-1v-1l2-3h6l2 1zM653 365v1l1 2 4 4h2v1l1 3h2l3 2-6 3-3 2-1 3-1 1h-2l-1 2v1l-2 1h-3l-2-1-1-1-2 1-1 2-2 1-1 1-3 1-1-1 1-3-2-3-1-1v-10h4v-13h3l5-1 1 1 3-1h1l2-1h0l2 3zM638 107h3l3-1 1-2 2-1v-2l1-1 4-1 3 1 1 1 1-1 4 1v3l2 2 1 1v1h2l1 1-1 1h-3l1 1 1 3h-3l-1 1v1h-4l-1-1-1 1-1-1h-6l-4-1h-2l-2 1h-1l-1-1-1-2 2-1v-1l-1-1v-2zM248 236v-1h0l1 1 1-3h1v1h1l-1 1v4l-1 1-1 1h0l-1 2h-1l1-4v-3zM301 19l1-1h5l2 2-2 1-5 1-1-1v-2zm9 4l1-1h-7v1h6zm25 15l2 2h0l4-1h3l3 1v-1l-4-2-6-1h-1l-1 2zm-48-19l-4 1h6l3 1h4v-3l-6-1-4-1-2 2 3 1zm26-3h5l-3 1-1 1 1 2h11l7-3 4-1-2-1v-2l-3-1-4-1-1-2-6 1h0l-3 1-3 1-3 1v2l1 1zm-75 15l3 1 13-1-8 2v1h4l8-2h10l4-2 1-2h-3l-3 1v-2l1-1-3-1-3 2v3h-4l-3-2-7-2-3 1-7 4zm34-12l-3-1h-1l-4 1-1 1h5l4-1zm-5 3l2-1-3-1-4 1-4 1 3 1 6-1zm19 10h5l3-3 2-2-1-1h0-4l-5 1h-3l-2 3 4-1-2 3h3zm-17 18l-4-2-3-2 1-2 1-4-2-1-3-1-2 1-1 3-3 2v-4l-1-1-5 2-2-2-7 1 2-2h-2l-9 2-4 1-4 3 4 1h4l-8 1 1 2h4l6-1 5 1-4 1h-9l-2 1 1 3 3-1 3 1 1 2h5l8-1 6-1h4l4 1h5l2-1-1-2h5l1-1zm9-1l-3 2-4 1 3 1h3l3 1 3-1-1-2h-1l-1-1-2-1zm-9-12h-7l2 3 5-3zm25 5l5-2 3-1 7-3-5-1h-5l-4 1-3 1-1 2v3h3zm23-8h6l8-1 3 1 5-1 2-1 1-1-2-2h-10l-5 1h-8l-1-1-2-1 1-1-1-2h-5l-2-1h-6l-2 1 2 2h5l2 2-1 1-1 2 7 1 4 1zm-82-6l6-2h3l3-1 4-3-5 1h-4l-8 2-7 3 3 1 5-1zm66 5l2-1v-1l-1-2-5 1-3 2 3 1h4zm-12 4v-1l-5 1-3-1-4 2 1 2-5-1-1 2 5 2 1 2h2l6-1 3-4-4-1 4-2zm-132 89l-1-2-2-1-1-2-1-1h-2l-2-1-3-1-1 1v2l3 1 1 1 2 1v1l5 2 2-1zm162-54l-2-1h-2v-2l-3-1-2-1-2-1-1 1v-2h-2l-3 3-2 3-3 2 4-1v2l5-1 4-2 1 1 5 1 3-1zM208 46l9-1 1-2 6-2 9-3 5-1-2-1-2-1-7-1h-13l1 2-5 3-4 2-3 2 5 2v1zm132 13v-1l1-1-2-1h-3l-2 2v2h3l3-1zm23 4l4 3 3 1 6-4 2-2h-4l-3-4h-5l-5-3 6-1-2-4-1-1-7-2-1-2-6 1v-2l-3-1-5-2-3 1-7 1 2-2-2-4-8 2-5 3-1-3 4-2-8 1-4 1-4 4-2 3h4l-4 2 2 1 4 1 6 1 10 1 5-1 3-1 1 1h3l2 3-3 1 6 1 3 2 1 1v1l-6 4-1 2v1h-12l-3 3 2 1h9v-1l4 1 4 2-2 1 3 2 6 2 8 1v-1l-3-2-3-3 7 3 3 1 2-3v-3l-1-1-4-2-2-2 1-2h4zM333 9v2l4 1h14l-5 2-2-1h-7v2l2 1-2 1-5 1-3 2h3l2 3-6-2h-2v3l-6 1-1 1 5 1h12l6 1 9-3h1-5v-1l5-1 2-2 5-1 3-1v-2h2l-3-1h8l2-1h6l7-3 5-1 7-2h-5l3-1 6-1 8-2h1l-4-1-5-1h-12l-5-1-7 1h-14l-4 1-4 2-1-1-3-1-5 2h-9l-4 1-1 1 2 1zm19 124l-1-1-1 1v1l4 1h1l2-1h-3l-2-1zm-47-56v1h2l5-2v-1h-4l-3 2zm55 47l-3-2-4-1-1 1 2 1 4 1h2zm28 4v-2h-2l1-2-3-1-1 1-3-1 1-2h-2l-2 1 3-3 2-3 1-1h-2l-3 1-2 3-5 5-3 2 1 1-2 2v1h13l-3 2h2l5-3 1 1-2 3h4l2-3-1-2zm-25 4l-5 4h-5l-4-1-1-3v-4l4-2-3-2h-5l-7 3-7 5h-3l5-3 6-5 4-1 4-3h8l7 1 6-1 4-3 6-1 3-1 2-2 1-4-1-1h-3v-3l-2-2h-5l-2-3-4-2 2-2-2-4-3-5-1-3-3 2-4 4-5 2-2-2-2-1v-4l1-3-5-1-1-1-3-2-2-1-3 1-3-1-5-1-2 1-1 6v3l-5 4 2 2 1 3v3l-3 2-4 3-6 1 2 2v6l-3 4-3 1-4-4-1-4v-3l2-3-3-1h-6l-2-1-4-1-2-2-2-1-6-2-4 1-1-3v-3l-4-1 2-4 3-3 5-4 5-3h4l1-3 4-1h4l5-3 1-1 5-3 2-2 2 1 5-1 7-2 1-2-1-2 3-2 1-1-3-2-4-1h-4l-2 4-4 3-5 3-1-3 2-2-2-3-6 3 3-4h-5l3-2-1-4-2-2h-3l-5 2-3 4 2 2 2 2-4 4-2-1-4 3 2-3-3-1h-3l-1 3-5-1-5 1-4-2-3 1-2-2-2-1h-6l-3 2 2 1-4 2-2-2h-3l-8 1-5-1 6-2-3-1h-3l-4-1-5-1-4-2h-3l-2 1-4 1 2-3-6 2-2-3h-2l-2 2h-3l-1-1-5 1-6 1h-4l-4 1-4 2-3-1-3-2h-5l-12 13-15 20h3l2 1 1 2 1 2 5-2 4-1v2l1 1 2 2v3l1 4 4 2-1 2-3 2-1 2 3 2-1 3 3 2-1 2v3l5 2 2 1 4 4h92v-2h1v2l1 1h2l3 1 3 1 3-1 4 1 1-1 2-1 1-1h1l3 1h3l1 2 3 1-1 1 1 1-1 1 1 1-1 1h1l1-1v1l3 1h5l3 1v1l2 3-1 1-3-1-1-2v2l-2 2-1 2v1l-3 1-2 2-1 1 2 1 3-2 2-1h1l1 1 1-1h2l3-1v-1h0-2l1-1 1-1h2l3-1 2 1 1-1h2l4-2 1-1h12v-1h1l2-1 1-1 2-3 3-3 1 1h2l2 1-2 4 2 2h9l-6 3-1 3h3l4-2 4-2 8-2 4-2-2-2 1-2zm-46-52l2-2-1-1h-1l-1 1h-1l1 1 1 1zm-172 24l3-2-3 2zM672 287v4h1l-1 2-1 1-2 1v2l-1 3v4l-1 1-1 2h0v2l1 2v9l1 2 2 2 2 5h-7l-1 1-1 2 1 1-1 5v3l1 1 2 1h1v3h-2l-2-2-1-1-3-1v-1l-3 1-2-1-2-1-2-1h-1l-1-1h-6l-1 1v-5l-1-1v-8h-5l1-1h-2v1h-3l-1 2v1l-2-1-1 1h-3l-1-2-1-1-1-2-1-3h-10l-1 1-1-1-2 1v-1l1-1v-2l2-1v1l2-2h2v1l1 1 2-2 2-2 1-1v-3l2-4 1-1 3-2v-3l1-1v-5l1-2 1-2v-5l2-1 2-2 3 2 2 1h2l3 1 1-2h2l4-2 2 1h1v-1h8l2 3h1l1-1 2 1 2-1 1 1 3 3z" fill="var(--map)"/>
+            <path d="M617 273h3v-1h1l1 1 4-2 2-1 1-1v-2h5l3-1 2-4 2-2h2l1 1 2 2v2l-1 1 1 1 1 1 3 2 2 1v2l2 1 2 2v2l3 2 1 1h-8v1h-1l-2-1-4 2h-2l-1 2-3-1h-2l-2-1-3-2-2 2-2 1v3h-2l-3-1-2 2-2 3v-2l-2-2-1-1-1-2-1-2v-5l1-1 2-3z" fill="var(--map)"/>
+            <path d="M609 316l-2-1-1 1-1 1-3-4 2-2-1-2 1-1h3v-2l2 2h3l1-2 1-2-1-3-1-2 1-4-1-1-2 1-1-2v-2h4l3 1 3 1v-2l2-3 2-2 3 1h2v2l-1 2-1 2v5l-1 1v3l-3 2-1 1-2 4v3l-1 1-2 2-2 2-1-1v-1h-2l-2 2v-1zM594 130v1h0l1 1h2v2h-4l-1 1h-2 0l-2 1h-2l-1-1-1-1h-2v-1l3-2-1-1h6v-1l4 1zM552 281l-2 1-2-1h-7l-2 2-4 1h0v-5l-1-2h-1l-1-1v-4h1v-2h0v-1h1v-3l-1-2v-1h5l1-1h1l1 1h1l1-1 2 1v1l2 1 1-1h2l2 1 1 5-1 3-1 4 1 3v1zM341 487l2 8h5v2l-3 1h-1l-2-1-3-1h-3l-5-2-4-2-5-4h2l6 3 4 1 1-2 1-2 2-1h3zm-18-111l2 5 2-1 1 1-1 4-4 2 1 6-1 1 1 1-2 2-2 4v6l-1 4 2 6 1 1 1 3-2 4 1 3-2 2v3l2 4-2 1v7l1 4-1 1 2 4 2 1-1 2 2 1v1l-1 1 1 2v4l-1 3 1 2-1 3-2 1 1 4 2 1h2l1 3 2 2h7l4 1h-3l-2 1-2 1v3h-1l-4-1-4-2-5-2-2-3 1-2-3-2-2-6 1-4 2-2-5-1 3-4-1-6 4 2v-8l-2-1v5l-2-1v-5l-1-6 1-3-1-3-1-4h1l1-6 2-6v-5l-1-6v-3l-1-4 2-4-1-7 1-8v-8l-1-5-1-5 2-1 1-2 2 2v3l2 1-1 4 3 4z" fill="var(--map)"/>
+            <path d="M609 291h-12v-3l-1-2-2-1-1-1-1-1 1-1v-2l2-4h1l2-2h2l2 2 2-2v-1l1-1 1-2 2-2v-2l1-1 1-2v-2l3-3 1-1v-1l-1-1v-1h1l1 2v5l2 3h-4l-1 1 2 2 1 1 1 1 1 3v1l-2 3-1 1v5l1 2 1 2 1 1 2 2v4l-3-1-3-1h-4z" fill="var(--map-active)" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M267 270l-2-1v-1h0v-1l-1-1h-1l-1-1-1-1-1-1 1 1-1 1-1-1h-1v-3l-1-1h1l1-1 2 1h2v1h1l1-1 1 2 1 2 2 1-1 1v2h0v1h0l-1 1zM274 217h6l3 1 1 2 4-1 1 1 2 2 2 2h4l-1 1 3 1 2 1v1h-3l-2 1-2-1-5 1 2-2-1-1-2-1-1-1-1-2-2 1-3-1-1-1-5-1h-1l2-1h-4l-3 1h-1l-1 1-1 1-2-1 2-1 1-1 2-1 2-1h3zM678 174l2-2-3 1h-2l-1 1h0-1l1 2h1l4-1v-1h-1zM618 126l-2-1-1 1-3-1h-1l-2 1-2-1-2-1-2-1v-2l-1-1 2-1 2-1h2l1-1 1 1 1-1 2 1 2 1v1h2v-1l2 1 1 1h2l2 2h-1l-1 1h0v1h-1 0-3v1z" fill="var(--map)"/>
+            <path d="M594 103v2l3 1v1l4-1 1-1 4 2 2 1v2l1 2 1 2v1l1 2-1 1-1-1-1 1h-2l-2 1-2 1 1 1v2l2 1 2 1-1 2h-1v3h0l-1-1h-2l-2 1h-3v1l-2-1h-1l-4-1v1h-3v-3l2-2-5-1-2-1 1-2h-1v-7h2v-1l1-3-1-1 1-1h3l2-1v-2l-1-2 3 1 2-1zM715 254l1 1v2l-2 1h1l-1 2h-4v-2l1-2 1-1h2l1-1z" fill="var(--map)"/>
+            <path d="M603 101l-2 3-4-2v-2l5-1 1 2zm-6-3l-1 1h-1l-2 3 1 1-2 1-3-1-1-2v-4l1-1 3-1 1-1 3-1v2l-1 1v1l2 1zM310 229v-1l3 1h3l1 2h2l-1 1h2l1 1-1 1h-5l-1 1-1-1h-1l-2 3-1-1v-1l1-1-1-1 1-1v-3zM604 216l-12 7-10 7-5 1h-4v-2h-1l-3-1v-2l-12-8-12-8-13-8v-1 0-4l6-3 3-1 3-1 1-1 5-2v-2l2-1 1-1 5-1v-1l-1-1-1-4v-2l-1-2 3-2 4-1 2-1 3-1 6-1h6l1 1 4-2h3l2 1h2l-1 2 1 3-1 3-2 2v3l3 2v1l2 1 2 6 1 4v10l-1 1 2 3v2l1 1h2l3 1 1 3zM276 311l2-2-1-2-1 2-2-2 1-1-1-3 1-1 1-2 1-2v-1l2-1 2-2 4 2h1v2h4l2 1 2 1v2l-1 3-4 4-4 1-2 3-1 2-2 2-1-2h-3v-1l1-1-1-2zM639 93v-2l-1 1-2-2-1-2 4-1h11v1l-2 2 1 3-1 1h-2l-3-1h-4zM683 194l-1 2v2l-1 2-1 1-1-1-2-2-3-5h0l2 4 2 4 3 5 2 2 1 2 3 4-1 1 1 2 4 3 1 1h-42l-1-13v-13l-1-3 1-2-1-1 1-2h5l3 1 4 1h1l3-1 1-1h6l1 2v-1l3 1h3l2-1 2 6zM517 201l-3 4-2 1-1 2-1 2v2l-2 1-2 2-1 2v2l-1 1-1 1-1 2v2l1-2h14l-1-5 1-2h3l1-9h11v-6 0h-15 0zM712 255l-1-2-1-2-2-1-1-1-3-1h-3v-1l-2 1-3-2-1 3-4-1v-1l1-6v-2l1-1 3-1 2-2 2 4 1 4 2 1 5 4 2 2 2 2 1 1 2 1-1 1h-2zM532 150v-2l-1-2 5-3 4 1h4l4 1 2-1 6 1 1 1 6 2 2-1 3 1h4v2l-3 2-4 1v1l-2 2-2 3 2 2-2 2-1 2-3 1-2 3h-8l-2 1-1 1h-2l-1-1-1-2-3-1v-1l1-1v-1l-1-1 1-3-1-2h1l1-2h0v-3l2-1-1-2h-5v-1h-2l-1 1z" fill="var(--map)"/>
+            <path d="M696 246l3 2 2-1v1h3l3 1 1 1 2 1 1 2 1 2-1 1-1 2v2h4l-1 2 2 2 1 1 1 2 12 4h3l-10 10-4 1-3 2h-3l-1 1h-2l-2-1-3 2-1 1h-2l-1-1h-2l-5-3h-2l-1-1v-2h-2l-2-4-2-1-1-1-1-2h-3l2-2 1-1 1-1v-3l1-4 2-1v-1l1-3 2-1 2-4v-3l4 1 1-3zM364 484l3-2 3 1 2-2 3 2-1 1-4 1-2-1-2 2-2-2zM646 53v2l5 3-2 3 4 4-2 3 3 2v3l5 2-1 2-3 2-6 5h-5l-6 1-5 1-2-2-3-1 1-4-2-3 1-2 2-2 7-4 2-1-1-1-4-2-1-2-1-5-5-2-4-2 1-1 4 2h7l2-1 1-3 5-1 4 1-1 3zM1199 356l-1 2h0l-2 1-3 1v-2h3l2-2h1zm-8 6l-2-1-1 1v2h4l1-2-1-1-1 1zM594 149l-1 3-1-1-1-2 1-2 2-1v3zm-20-29l2 1h2l3 2h1l2 1 5 1-2 2v3h-3l1 1-3 2v1h2l1 1v1l1 2-1 1 1 3h1v2l-3 2-7-1-4 1-1 2h-4l-3-1-2 1-6-2-1-1 2-3v-7l-3-3-3-2-5-2v-2l4-1 6 1-1-4 3 1 8-2 1-3 2-1 1 1h1l2 2zM602 313l-4-3-2-3-2-4v-2l1-3 1-2 1-1h5v-4h7v2l1 2 2-1 1 1-1 4 1 2 1 3-1 2-1 2h-3l-2-2v2h-3l-1 1 1 2-2 2zM544 105l-2 2h-4l1-2-1-2h3l3 2zm9-15l-4 4h7l-1 3-3 3h4l3 5h2l2 4 1 2h4l-1 3-1 1 1 1-3 2h-4l-6 1h-1l-3 1h-3l-2 1h-2l5-4 3-1h0l-5-1-1-1 4-1-2-2 1-2h4l1-2-2-2h0l-4-1-1-1 1-2-1-1-2 2v-3l-1-2 1-4 3-3 2 1 4-1zM702 151v-1l-1-3-2-1h-2l-1-1v-1l3 1h5l5 2v1l2-1 4 1 1 1 2 1-1 1 2 2h0-2l-3-1h0l-5 1-3-2h-4zM375 290l-1 2h-2l-1-1h0l-1 1-2-1 1-1v-2l1-2-1-2-1-2 2-3h1l3 1 4 3v1l-2 4-1 2zM503 252v-1h4l1-1h1l1 1h1l2-1v1l-1 1h-2l-1-1-2 1h0l-1 1-3-1zM532 272h-1v1h-1l-1-1v-1l-1-2h-2l-1 1v-2l-1-1 1-1-1-1-1-1h-5v1l-1 1-2 2-1-3-2-1h-1l-1-1v-2h0l-1-1 1-2h3l1-1-1-1h1v-2l1 1h6l1 1h2l1 1h1l1-1h1l1-1h1l1 1v1l2 2-1 1v1-1l1 1v1l1 1h-1v1l1 2v3h-1v1h0v2h-1z" fill="var(--map)"/>
+            <path d="M596 296l-1-1 2-4h5v4h-5l-1 1zM509 260l-2-2h-2l-1-1h0l-1-1v-1h3l1-1h7v2h-1l1 1-1 1h-3l-1 2zM350 269l2 2 2 2v2h2l2 2 1 1-1 3-2 1v3l1 2h1l1 2 2 4h-1l-2-1-1 1-2 1h-1v1h-2l-2-2v-2l-1-2v-3l1-1-1-1-1-1 1-2h-3l-2-3 1-1v-2h2l1-1-1-1v-1l3-3zM253 253l-1-1h-1l1-2h-3 0l-1-1-1-1h-1l1-1v-1h0l2-1 1-2h8v-1h1l1 1h1l1-1 1 1h1l1 1h1l1 1 1 1h-2l-1 1h-2 0-1 0-1 0v1l-2 1v1h-1l-1-1v1h-2v2h-1v1h-1zM625 136l1 1 1 1-2 1h-3l-3-1h-2l-1 1-1-1v2l1 1 1 1 2 2h1l1 2 3 1v1l-3-1-2-2-3-1-3-2v-1l-1-1v-1l-2-1-1 2-1-2v-1h5v-1h1v-1l3-1h1l3 2h4zM305 228l2 1h3v3l-1 1 1 1-1 1-2-1-2 1-2-1-1 1-2-1v-1h3l3 1 1-1-1-2v-1l-2-1 1-1z" fill="var(--map)"/>
+            <path d="M616 132l1-2-1-1h2v-1l2 1h4v-1h1l2-1v1l2-1v-1h1l4 1h1l2 1v1h-2l-1 3-2 2-3 1h-2l-2 1h-4l-3-2h-1l-1-2h0zM685 183v1l-2-1v3h1l-1 1v1l1-1 1 2-2 5-2-6v-1h0l1-2v-3l1-1h2l1 1-1 1h0zM615 163l-1 3v3l-3-1-2-1-4-2v-2l4 1 3-1h3zm-22-11l2 3v5h-2l-1 1-1-1v-5l-1-2 2 1 1-2zm10-19l5 1v3l-2-1-3 2v2l1 2 3 2 2 3 4 3h3l1 1h-1l3 2 2 1 3 2h1l-1 1-2-1-3-1-1 3 2 1v2h-1l-2 3h-1l-1-1 1-2h1l-2-3-1-1-1-1-1-1-2-1-2-1-2-1-3-1-3-3-3-2-1-3-1-1-3-1-2 1-2 1-1 1v-2h-1l-1-3 1-1-1-2v-1l1 1h2l2-1h2l1-1h4v-2l2 1v-1l3-1 1 2zM289 233l2 1 2 1v1h-5l-2-2h1l1-1h1z" fill="var(--map)"/>
+            <path d="M685 184v-1l4 1 7-4 1 5h0l-7 2 4 4h-1l-1 1-3 1v1l-2 1h-4v-1l2-5-1-2 1-1v-2zM1024 178l1 1-1 2-2-1-2 1v2l-3-1v-2l1-2h2l1-1 3 1zm18-11v3l1 2-1 2-4 2h-6l-3 4-3-1-1-3-6 1-3 2h-4l4 2-1 6-1 2-2-2v-3l-3-1-2-2 3-1 1-3 3-1 2-3 6-1 4 1 1-7 3 2 4-3 2-2v-4l-2-4v-2l4-1 4 5 1 3-2 3 1 4zm0-25l3 1 1-2 3 4-5 1-1 4-6-3-1 4h-3l-2-3v-3h4l-1-5-1-3 6 4 3 1zM708 302l2 3-2 2-1 1h-1l-1 3-1 1-1 3-1 1-5-4v-2l-13-7h-1v-4l1-2 2-2 1-3-2-4v-1l-2-3 3-2 2-2h2v2l1 1h2l5 3h2l1 1h2l1-1 3-2 2 1h2l-3 4v13zM800 149l1-2h2l6 1v-2l1-1 5 2 2-1h5l5 1 2 1h2v1l-5 2-1 2h-4l-1 2h-5l-3 2v1l-1 1h-6l-4-1h-4v-2l4 1 1-1h3l3-2-4-2-2 1-3-2 2-2h-1zM997 162l5 4 1 2 2 4-1 2-3 1-2 2h-3l-1-2v-3l-3-4h2l-3-3h2l1-2h3v-1zM632 149v1h-1v-1h-1v-2h1v-2h1v1h1l1 1h1v2h0-3zM728 193l1 1v1l1 3h-2l-1-2h-3l2-4 2 1z" fill="var(--map)"/>
+            <path d="M800 149h-2l-3 3-1 2h-2l-1-1h-4l-1-3h-2l-1-4-4-2h-10l-3-3-3-1-6-3h-1l-8 2 3 13h-2l-3-2-2-1h-4l-1 1h-1l1-2-1-1-4-1-2-4h-2v-2l3 1v-3l2-1 3 1v-3l-1-3-3 1-3-1-3 1-3 1-2-1v-1l-3-3h-2l-3-2 1-3-1-1 2-4 4 3v-3l6-4h5l7 2 5 2 3-2h5l4 2 1-1h5v-1l-6-3 3-2-1-1 3-1-3-2 1-1 12-1 1-1 8-2 2-1 6 1 2 3 3-1 5 2v2l3-1 7-3-1 1 5 3 10 9 2-2 5 2 4-1 2 1 2 2 3 1 2 1h4l2 2-2 2-2 1 1 3-2 2-7-1v6l-2 1-6 1 5 6-2 1v2h-2l-2-1-5-1h-5l-2 1-5-2-1 1v2l-6-1h-2l-1 2zM853 273v3l-2 1-3 1-2-3v-5l1-6 2 2 2 3 2 4zM535 284h-1l-4-2-3-3-3-2-2-2v-1l1-1 1-2 2-2h2l1 2v1l1 1h1v-1h1v4l1 1h1l1 2v5zM663 402l1 1-1 2-1 1-2 1-1 1h-1l-2-2 2-3 2-1 1-1 2 1zM635 106v-2l-2-1h-3l-1-3 4-2 5 1 3-1 1 1h1l4 2v2l-2 1-1 2-3 1h-3l-1-1h-2zM582 121h1l-1 2h0-1v-2h1z" fill="var(--map)"/>
+            <path d="M629 100v-3l1-2 3-2 3 3h2l1-3h4l3 1h2l2 1v2l2 2-4 1-1 1-4-2h-1l-1-1-3 1-5-1-4 2zM650 127h3l2 1h1l2 1v1l1 1 1 1 1 1v1h1-4 0l-1 2v1h-1l-1-1v-4l-2-2-1-1-1-1-1-1zM629 148l-1-1-1 2v1h0l-1-1-2-1v-1l1-2h1v-1l1 1h1l1 1h1v2h-1zM738 344l1 1 1 3v4l1 1-1 2v1l-1-2-1 1v4l-1 1v3l-2 4-2 5-3 7-1 5-2 4-3 1-3 1h-2l-3-2-1-2v-3l-1-3v-2l1-3h1l1-2 1-2 1-3-1-1v-2l-1-4 2-2v-2h2l2-1 1-1h2l2-2 3-2 1-2v-1h1l2-2 1-2 1-2 1 2zM631 150h1v-1h5l2 1v2h0l-1 1h-3l-2 1-1-1-1-2v-1zM685 340l-1 3 1 5h1l1 1 2 2v5l-2 1-1 2-2-2v-6l-1-1-1 1-2-2-2-1 1-3 1-1v-3l1-3v-1l-1-3-1-2 3 1 1 1 1 1 1 5zM223 207l-1 3-1 3-1 5-1 1v2l1 2 1 3 2 2v3l1 1 4 1 1 2 4-1 2-1h3l2-1 3-1 1-2v-3l1-1 3-1 3-1h6v2l-2 2-1 2v3l-1 2-1-1h-2l-1 3-1-1h0v1h-7v2h-2l2 1 1 1v1h1v1h-5l-2 3v1h0v2l-4-4-2-1-2-1h-2l-3 1-2 1-3-1-2-1-3-2h-3l-4-2-2-2h-1l-2-1-4-1-1-1-3-2-2-3-1-1 2-1-1-1 1-1 1-1-1-2v-1l-1-2-3-3-3-3-1-2-3-2v-3l-1-1-2-1v-3h-2l-2-2-1-2v-1l-1-3-1-2 1-2-3-1h-1l-1-1-1 2v1l-1 3 1 1 2 3 1 1h0v1h1v2l1 1 1 2 2 1v4l1 1v4h2l1 2 1 1v1l-2 1h0l-1-2-2-2-2-2-2-1 1-2v-2l-2-1-2-2h0-1l-2-1-2-2 1-1 1 1 2-2v-1l-2-3-2-1-1-2v-3l-1-2-1-4h8l5 2 7 3h10v-2h6l1 1 1 2 2 1 1 2v2l2 1 3 1 2-3h3l2 2 2 2 1 2 1 2 1 3v1l3 2h3zM922 277v2h3l1-2h1l2 3 1 2 1 2-1 2 1 1v2l1 1 2 3v2h-3l-3-3-5-3v-1l-2-3-1-3-1-2v-2l-1-2h1l3 1zm63 6l-3 2-3-1h-4l-1 4-2 1-1 5-3 1-4-1h-1l-2 2h-3l-2 1-2-3-1-2 3 1h2l1-3 1-1 5-1 2-3 2-2 2 2v-1h2v-4l3-3 1-2h2l2 1v2l2 1 3 1v1l-2 1 1 1z" fill="var(--map)"/>
+            <path d="M685 340h3l4 1h1l2-1 2-1h2l4-1 2-2 1 2v12l1 2-2 2-1 3-2 2-4 1-4 2-4 4h-1l-3 3-1 1-1 2 2 3v3h1v3l-1 2 1 1-1 1-1 1-3 2-4 2-2 1v1l1 1v1h-3v-1l-1-2v-1l1-4-1-3-1-5 4-4 1-2h0l1-3-1-1v-2l1-3v-4l-2-1-1-1-1-1h-5v-4l11-3 2 2 1-1 1 1v6l2 2 1-2 2-1v-5l-2-2-1-1h-1l-1-5 1-3zM619 401l-3-3-1-2v-4l-1-2-1-6v-4l-1-2-1-2-2-2-2-5v-2l-3-3v-3l1-1h5l2 1h15l2 2h9l6-1 3-1h2l2 1h0l-2 1h-1l-3 1-1-1-5 1h-3v13h-4v10l-1 14-3 1-2 1-2-1h-1l-1-2-1-1-2 2zM1145 374l2 3 2 1-2 1-2-1-2-2-2-1-1-3-1-1h2l2 1 1 1 1 1zM570 257v-3h-4v-2l-2-3-1-1 1-2h2l1-1 5-1h3v-2l2-3v-8l5-1 10-7 12-7 6 1 2 2 2-1 1 5 2 1v1l1 2-1 1-1 7v5l-4 3-2 5 2 1v3h2v2h-1v1h-1l-3-4h0l-3 2-3-1h-5l-2 2h-2l-4-2-2 1h-2l-1-2-3-1h-4l-1 1-1 2-1 2v3l-3-2h-1l-1 1z" fill="var(--map)"/>
+            <path d="M593 282l-4 2-2-1-1 1h-3l-2-2-1-3-2-2h-6v-8l1-2 1-1 1-3h0l1-2-1-2v-4l1-2 1-2 1-1h4l3 1 1 2h2l2-1 4 2h2l2-2h5l3 1 3-2h0l3 4h1l1 1v1l-1 1-3 3v2l-1 2-1 1v2l-2 2-1 2-1 1v1l-2 2-2-2h-2l-2 2h-1l-2 4v2zM258 260l-1-1-2-2v-1l-2-1-1-2h2v-1h1v-2h2v-1l1 1h1v-1l2-1v-1h4l1-1h2v2l-1 2-1 1v2h0v2h0l-1 2v3h0l-1 1h-1v-1h-2l-2-1-1 1zM578 110h0v1h1v1h-1v0h1l-1 1h1l1-1h0v-1h0v-1h0v-1h4l1 1-1 3v1h-2v4l-2-1-2-1-3 1-2-1 1-1 1-1 1-1 1-1v-2h1zM643 45l10 3-4 1 4 2-5 2h-2l1-3-4-1-5 1-1 3-2 1h-7l-4-2-1 1h-2v2h-6v2h-3l-2 2-3 4-4 5 1 1-1 2h-3l-1 3v5l2 2-1 4-2 2-1 2-2-2-6 4-5 1-4-2-1-3-1-9 2-2 8-3 6-4 5-5 7-7 4-2 8-5 6-1h5l4-3h5l5-1zM868 200v2l1 2v1h-3l-4-1h-3l-2-2h-5l-5-2-3-2-4-1 1-4 2-1 1-1 3 1 4 2 2 1 1 2h3l3 2 4 1h4zM1145 445v2l3-2 1 2-1 1-2 2-4 2-2 2v2h-3l-3 1-2 2-4 4-4 2-2 1-3-1-1-1h-4v-1l3-3 7-3 2-1 3-1 4-2 3-2 3-3 2-1 1-2 3-1v1zm13-17l1 4 1-3 1 1v3l2 1 2 1 3-2 1 1-2 3-2 2h-3l-1 1v1l-1 1-3 2-2 2-4 2v-1l-1-1 3-3v-2l-3-1 1-1 3-1 2-3 1-3-1-2 1-1-1-1-2-3v-3h1l1 2 3 1-1 3zM769 224l-1 3-2-1v1l-1 2 1 2-1 1h-1l-2 1v2l-1 1h-2l-2 1v1l-1 1h-2l-3 1h-1l-1-2-4-6 11-4 2-7-2-3v-1l1-1v-2l1-1h-1v-2h2l2 2 2 1 3 1h2l2 2 1 2h1v1l-1 2-1 1-1 1zm-10-17v1l-1-1 1-2v2zM285 274l-1-1-1-2 1-1-1-1v-1l-2-1h-1l-1 2-2 1h-1 0l2 2-1 1h-1l-1 1-1-3v1h-2v-2h-4v1l-1-1 1-1h0v-1h0v-2l1-1 1 1v1h2l1 1h2l1-1 2-1 2-1h2l-1 1h4l1 1 1 1v1l1 2-1 1h-1l-1 2zM317 362l-1 2-2 1-4-2v-2l-7-4-7-3-3-3-1-3v-1l-3-4-4-7-4-7-1-2-1-2-3-2-3-2 1-1-2-4 1-2 3-3 1 2-1 1v1h3l1 2 2-2 1-2 2-3 4-1 4-4 1-3v-2l1-1 2 2 1 2 2 1 2 3 3 1 2-1 1 1 2-1 3 2-2 4h1l1 2-3-1v1l-3 1-4 2v2l-1 1v2l-2 1v1l-1 1 2 3 2 2-1 2h2l2 2h3l3-2v5l1 1 2-1 4 6-1 1v6l-1 1 1 2-1 1 2 3-2 4zM1117 324h-1l-2-1-1-3-1-2 1-1v1l1 1 2 2 1 2v1zm-14-5h-2v1l-2 1-2 1h-2l-3-1-2-1 1-1h5v-2h1v2h2l1-2 2-1v-2h2l1 1v2l-2 2zm-17 7l3 2 2 4h2v1l2 1h-1l4 2-1 1h-2l-1-1h-3l-3-1-3-2-2-2-1-3-5-2-3 1-2 2v2l-3 1h-6l1-12 1-11 6 2 6 2 3 2 1 2 1 2 6 2v2h-3l1 3zm22-11l-2 1v-2l-1-1-2-1-2-2-2-1 1-1 2 1 1 1 1 1 2 1 1 1 1 2zM1012 269v5l-1 3-1-4-2 2 2 3-1 1-5-2-1-2 1-2-2-2-1 2h-2l-2 2-1-1 1-3 2-1 2-2 2 2 2-1 1-2h2v-2l3 1v2l1 1zm-9-6l-2 1-1 2-1 1-2-2 1-1v-1l1-2 2-1-1 3 3-4v4zm-20 3l-4 3 1-2 3-2 2-3 1-3 1 3-2 2-2 2zm12-9l2 1h2v2l-1 1-3 1v-5zm12-1l2 4-3-1v1l1 2-2 1v-2h-1l-1-3 2 1v-2l-2-2h3l1 1zm-14-3l-1 3-1-2-2-3h3l1 2zm-3-20l2 1h2l-1 2 2 2-1 3-2 2v2l1 3 2 1 2-1 4 2v2l1 1v2l-3-2-1-2-1 1-3-2-3 1-2-1v-2h1l-1-1v1l-2-2-1-2v-3l1 1v-5l1-4h2zM611 117l-1-2v-1l-1-2-1-2v-2l2-1 5-2 4-1h3v1h3l4 1h8l1 1v2l1 1v1l-2 1 1 2 1 1 1 4v1h-1l-3 3 1 2-1-1-3-1-2 1-2-1-2 1-2-1h-1 0l-2-2h-2l-1-1-2-1v1h-2v-1l-2-1-2-1zM685 184v2l-1 1-1 1v-1l1-1h-1v-3l2 1zM532 150l1-1h2v1h5l1 2-2 1v3h0l-1 2h-1l1 2-1 3 1 1v1l-1 1v1l-2 1h-3l1-3-1-2h-1l-1-2v-2l2-1v-2l1-2v-1l-1-2v-1zM342 378l1-4v-2l2-3 6-1h3l3 2 1 1 1 2v5l4 1 1-1 3 1v1l1 3v2h2l1-1 1 1v6l-1 3-3 3h-6l-4-1 3-6-1-1-3-2-5-2-3-1-7-6zM740 211l-1-2 1-2 1-1 1 1v5h-1l-1-1zM637 129l1-1h5l1 1h1l3-1v-1h2l1 1 1 1 1 1 2 2v4l1 1 1 1 2-1 2 1v1l-2 1-1-1v5l-2-1-3-1-4 1-1 1-5-1h-4l-1-1-1-1 1-1h-1l-1 1-2-1v-2l-2-1-1-1-2-1 3-1 2-2 1-3h2z" fill="var(--map)"/>
+            <path d="M632 137l2 1v2l2 1 1-1h1l-1 1 1 1-1 1v1l2 1-1 1-1 2h1l-1 1h-2 0v-2h0-1l-1-1h0-1v-1h-1v2h-1v-1h-1l-1-1h-1l-1-1h1l1-2-2-1 1-2h-2l2-1-1-1-1-1 2-1h2l2 1 1 1zM1131 64l-1 2h-5l4 3v1h-3l-4-1-5-1-2-2h-7l-3-1-1-1h-2l3 2v2l-3 1h-4l5 2 5 3 2 1 2 1v1l-7-1-6 3h-2l-2 3-3 2v2l-6-3-6 3-3-1-1 1h-5l1 2-1 4 1 1 4 1 4 5h-3l1 3 2 2-4 2 1 4-4 1 1 3-2 3-3-2-5-5-7-8-1-5 1-2-1-2 4-1 2-4 3-4 3-3-2-5-4 1 1 2-4 4-7-4-7 1-3 6 5 2-7 1-4 1-2-3h-5l-3 1h-10l-9 1-6 7-7 8 5 1 3 2 4 1 1-2h3l7 4 2 3v4l2 4 1 6-2 5v2l-3 4-3 5-1 2-4 2h-2l-2-2-4 3v1l-1-1v-2h1l-1-4-2-3 2-1h4l1-3v-8l-4 1-3 1h-5l-3-3-5-3-6-1-3-4-2-2-2-1-4-4-3-1-6-1h-7l-2 2 2 1 1 2-1 1-2 4 1 2-3 2-5-2-4 1-2-1-2-1-4 3h-4l-2 1h-8l-3-2-3-2h-8l-3 1-5-2-1-2-5-1-3-1-4-1-2 3 2 3-2 2-5-1h-3l-3-2h-4l-3-1-4 2-5 3-4 1h-1l-2-2h-4l-2-1-3-1-2-2-2-1-4 1-5-2-2 2-10-9-5-3 1-1-7 3-3 1v-2l-5-2-3 1-2-3-6-1-2 1-8 2-1 1-12 1-1 1 3 2-3 1 1 1-3 2 6 3v1h-5l-1 1-4-2h-5l-3 2-5-2-7-2h-5l-6 4v3l-4-3-2 4 1 1-1 3 3 2h2l3 3v1l2 1-1 2-4 1-2 3 3 4v2l4 4-1 2-1 1-1-1-3-2h-1l-2-1-1-1-4-1-2 1v-1l-5-2h-5l-3-1v1l-5-3-4-2-3-2h2l3-3-2-2 4-1v-1h-3v-1l2-1h3v-2l-1-2 1-1v-1l-5-2h-2l-2-1h-2l-5-1v-1l-1-1h-3v-2h1l-3-2h-4l-1 1h-1l-1-3-1-1h3l1-1-1-1h-2v-1l-1-1-2-2v-3l-4-1-1 1-1-1-3-1-2-2v-2l-2-1 1-1-1-3 2-2v-1l3-2-4-1 6-5 3-2 1-2-5-2v-3l-3-2 2-3-4-4 2-3-5-3v-2h2l5-2 3-1 5 2 8 1 12 4 3 2 1 2-3 2-5 1-14-3-2 1 5 2 1 2 1 4 4 1 3 1v-2l-2-2 1-1 8 2 2-1-2-2 6-4h3l3 2 1-3-3-2 1-2-3-2 8 1 3 2h-4l1 2 2 2 5-1v-3l5-1 10-3h2l-2 2h3l2-1h6l3-1 5 2 2-3-4-2 1-1 9 1 5 1 12 4 1-1-4-2v-1h-4v-2l-2-3-1-1 4-3v-4h2l8 1 1 2-1 3 2 1 3 2 1 5 5 2v3l-4 5h4v-1l3-1v-2l2-1-3-2v-3h-3l-2-2 1-4-5-3 3-2-2-3h2l2 2 1 4h4l-3-2 4-2h6l6 2-4-3-3-3 4-1h13l-4-2 2-3h3l4-2h7v-1h10l4-1h5v-2l1-1 5-2 6 1-3 1 6 1 3 1h9l8 1 4 2 1 2-2 1-5 2-2 1h4l5 1 2-1 4 3v-1l4-1 10 1 2 1 12 1-2-3 6 1h5l6 2 4 2-1 2 7 2 5 2v-4l6 2 4-1 6 1 1-1h6l-6-3 2-2 28 3 5 2 11 3 11-1 6 1 4 1 3 3 4 1 3-1h17l8 3 3-1-5-2-1-2 11 1h5l11 2 6 1 10 3 12 4 2 2 3 1-3-3 8 1 10 3zm-95 61l-7-7-3-3-2-4-3-3-2-2h-1l2 2-2 1 2 5 4 4 3 4v3l3 4 1 4 2 2 1-2 3 2-1-3-5-3v-5l5 1zm-403-22h-3l-4 1-1 1 4 1h6v-2l-2-1zm448-56l3-1h2v-1l-6-1h-3l-1 2 2 1h3zM957 36l-1 2h11l-2-1-5-1h-3zm20-3l2-2h-8l-6-1v1l7 2h5zm-25-1h10l-1-2-12-2h-11l2 3 8 2 4-1zM711 42h-2l1 2 6 1 1 2h11l-7-3-1-3 3-3 2-4 7-3 8-2 8-2 1-1-2-1h-5l-4 2h-9l-8 3-5 1 1 2-5 3 3 1-4 3v2zm131-22l-1-2-9-2h-2l-2 1v4l14-1zm-159-7l3 1 2-1h1l2-1h3l1-1h-7l-1 1-1-1h-4l-4 1h5v1zm123 3l6 1 9 1h5l-3-3-10-4-7-2-4 1-4 3h4l4 3zM671 303l1 2v2l-1 1h-2l-1 2-2-1v-2h0l1-2 1-1h0l3-1zM608 134h3l1-1h3l1-1h0l1 2-3 1v1h-1v1h-5 0v-3zM628 22l-5 1-5-1 1-1-1-1 5-1 1 2 4 1zm-18-7l9 3-6 1-1 3h-3v3h-4l-6-2 3-1-5-1-5-3-3-3 7-1 2 1h4l1-1h3l4 1zm18-3l5 2-3 2h-7l-8-1-1-1h-4l-3-1 8-1 4 1 2-1h7zM624 123h1l2 1 2-1 2 1 2-1 3 1-1 1v2h-1l-4-1h-1v1l-2 1v-1l-2 1h-1v1h-4l-2-1v-3h4v-1h0l1-1h1zM522 275h-1l-3-2-2-1v-2l-1-2 2-2 1-1v-1h5l1 1 1 1-1 1 1 1v2l1-1-2 2-1 2-1 1v1zM503 251l-1-3-2-1 1-1 2-2 1-2 1-1h2l2-1h2l1 1 3 1 2 3 2 2v2l1 3 1 1 1 1-1 1h0-2 0-4l-1-1h-7l-1 1h-3v-3l3 1 1-1h0l2-1 1 1h2l1-1v-1l-2 1h-1l-1-1h-1l-1 1h-4zM744 257v-1h-2l-1 2h-2l-2 1h-4l-2 1-3 1h-4l-3 1h-2l-2-1v-2l-2-1-1 2-1 2 2 2 1 1 1 2 12 4h3l-10 10-4 1-3 2h-3l-1 1-3 4v13l2 3 1-1 1-1 4-5 3-2 6-4 3-3 4-5 3-4 3-5 2-4 2-4 1-4v-3l1-3zM359 278l4 1 1-1h2l4 1-2 3 1 2 1 2-1 2v2l-1 1-2-1-2 1-1-1v3l-2-1-2-3-1-2h-1l-1-2v-3l2-1 1-3zM683 266v2l-1 1-1 1-2 2h3l1 2 1 1 2 1 2 4-2 2-3 2-2 2h-2l-3 1-2-1-2 1-3-3-1-1-2 1-2-1-1 1h-1l-2-3-1-1-3-2v-2l-2-2-2-1v-2l-2-1-3-1 1-1h1l1-4 1-1 3-1v1l2 2 1 1 2-1h2l1 1h3v-1l2-1v-1h2l3 2 2-1 1-2 2-2v-2l-1-1 2-1h2v5l2 2v3h1zM251 252h0-4l-1-1h-2l-1-1h0l2-1h0v-1h2l1 1 1 1h3l-1 2zM614 254v-2h-2v-3l-2-1 2-5 4-3v-5l1-7 1-1-1-2v-1l-2-1-1-5 4-2 14 7 14 7 1 14-3-1-2 3-1 2 1 1-1 1v2l-1 1v1h1l1 2v2l1 1v1h-2l-2 2-2 4-3 1h-5v2l-1 1-2 1-4 2-1-1h-1v1h-3v-1l-1-3-1-1-1-1-2-2 1-1h4l-2-3v-5l-1-2zM788 473l2 1h3v1l-1 2h-5v-2l1-2h0zM569 277l-3 1-1-1-1-2v-2l1-3-1-2v-5l-2-2v-1h3v2l1 1 1 1v2l1 1v8l1 2zM926 256l-3-2h-3v-2h-3v3l-2 6-1 3 1 2h2l2 4 1 3 2 2h2l2 2-1 2h-3v-2l-3-1h-1l-1-1-1-2-2-2-2-2v3l-1-2v-3l1-3 2-4 1-3-1-3v-2l-1-2-2-3-1-2h1l1-3-2-3-2-2-3-3 2-1 1-4h3l1-2h2l2 1v2h3l-1 4 1 3 3-2h4v-1h3l3 3v4l4 3v3l-1 1h-4l-4 1-2 3 1 4zM802 156l-1 1-4-1v2h4l4 1h6l2 3h1l2 1v1l1 2h-6l-1 1-2 1h-1l-1-1-1-3h-1v-1l-2-1-1 1v2h0-2l-1 2-1-1-3 1h-1l1-4-1-2-2-1v-2h3l1-2 1-2 4-1v2l1 1h1zM1006 331l1-1 3-1h5l-1 1-4 2-3 1v-1l-1-1z" fill="var(--map)"/>
+            <path d="M771 172v-3h-3l-4-3h-3l-4-2h-6l-2 2-3 1-1-3v-3l-3-2v-2h-2l1-3 3 1 3-2-3-2-1-2-3 1v3l-1-3 1-1h4l2 1 3 2h5l-1-2 3-1 3-2 4 2 1 3h5l2 1 2 4 4 2 3 2 4 1 4 2 1 2h-1l-2-1-1 1-2 1-1 3-1 1-3 1v1l-3 1-4-2zM595 191l-2-6-2-1v-1l-3-2v-3l2-2 1-3-1-3 1-2 4-2 2 1v1l3-1v1l-2 2v1l2 1-1 3-2 2 1 2h2v2h2v3l-2 1-1 1-2 2v3h-2zM988 212l-1 6-1 3-2-3-1-3 1-3 2-3 2 1v2zM683 303h1l13 7v2l5 4-2 4v2l3 2v1l-1 2v2l1 3 1 3 1 1-2 2-4 1h-2l-2 1-2 1h-1l-4-1h-3l-1-5-1-1-1-1-3-1-2-1-3-1h-1l-1-1-2-5-2-2-1-2v-5h1l1-1 2-2 1-1v-1l-1-1v-1l1-1v-2l-1-2h12zM665 114h1l1-1h4l3 2h-1v2h3l1 1v1l5 1h2l2 1h2l5 2v1l-1 1 1 2v2h-3l-2 1v1l-2 1-2 1h-3l-3 1-2 1 2 2h5v2h-4l-4 2h-2l1-2-4-1 1-1 3-1v-1h-1 0l-6-1v-1h-3l-1 2-2 3-2-1-2 1-1-1h1v-1l1-2h4-1v-1l-1-1-1-1-1-1v-1l-2-1h-1l-2-1h-3 0-2v1l-3 1h-1l-1-1h-5l-1 1v-1l-2-1v-2l1-1 1 1-1-2 3-3h1v-1l-1-4h1l2-1h2l4 1h6l1 1 1-1 1 1h4v-1l1-1h3z" fill="var(--map)"/>
+            <path d="M676 303h-5l-3 1h0v-4l1-3v-2l2-1 1-1 1-2h-1v-4l2-1 2 1 3-1h2l2-2 2 3v1l2 4-1 3-2 2-1 2v4h-7zM789 166l-1-2-4-2-4-1-3-2-4-2-2-4-2-1h-5l-1-3-4-2-3 2-3 1 1 2h-3l-3-13 8-2h1l6 3 3 1 3 3h10l4 2 1 4h2l1 3h4l1 1h2l1-2 3-3h3l-2 2 3 2 2-1 4 2-3 2h-4l-1-1v-2l-4 1-1 2-1 2h-3v2l2 1 1 2-1 4-3-1h-1zM309 257v1l-2 1 1 1v2l-2 2 1 3h2l1-3-1-1v-3l4-1v-2l1-1 1 2 3 1 2 2v1h3l4-1 2 2h3l2-1v-1h9l-3 1 1 2h2l3 2 1 3h3l-3 3v1l1 1-1 1h-2v2l-1 1 2 3 1 1-2 1-4 1-2 1-1 1-3-1-3-1-1 1 2 1v4l3 1h1l-3 1v2l-2 1h-3v1l-3 1-2-2-1-4-1-1-1-1 2-2h-1l-1-1v-5l1-2 1-1-2-1h-4l-2 1-2-4h-7l-1-1h0l-1-1 1-1v-2h-1v-2h-2l1-2v-3l1-1 2-1 1-2 2-1zM750 240l-3 1v3l-4 1-5 2-3 2-2 1-1-1-2 2-2 1h-4l-1 1h-1v1h-6l-1-2v-3l-1-2-1-2h1l-1-2h1l-1-2 2-1-1-2 1-1 2 1 1-1h4v1h5l1 1 2-1 2-3 3-2 10-1 4 6 1 2zM672 403l-1 1-2 2-1 2-2 2-4 4-3 2-2 2-4 1h-2v1h-11l-4 1-3 1-2 1h-2l-1-1h-1l-2-2v1-3l-1-3h1v-3l-2-3-2-3-2-5 2-2 1 1 1 2h1l2 1 2-1 3-1 1-14 1 1 2 3-1 3 1 1 3-1 1-1 2-1 1-2 2-1 1 1 2 1h3l2-1v-1l1-2h2l1-1 1-3 3-2 6-3h1l2 1 1-1h2l1 5 1 3-1 4v1h-2l-1 1-1 1v1l2 2h2l1-2h3l-1 3-1 3-1 2-2 1zm-9-1l-2-1-1 1-2 1-2 3 2 2h1l1-1 2-1 1-1 1-2-1-1zM679 332l1 2 1 3v1l-1 3v3l-1 1-1 3 2 1-11 3v2l-2 1-2 1-1 2h-1l-3 3-2 2h-3l-4-1h0l-2-1h-2l-3 1-2-3-2-3v-11h7v-1l1-1-1-2 1-2-1-1h1l1 1h1l2 1 2 1 2 1 3-1v1l3 1 1 1 2 2h2v-3h-1l-2-1-1-1v-3l1-5-1-1 1-2 1-1h7l1 1h1l3 1 2 1z" fill="var(--map)"/>
+            <path d="M672 378h-2l-1 1-2-1h-1l-3-2h-2l-1-3v-1h-2l-4-4-1-2v-1l-2-3 4 1h3l2-2 3-3h1l1-2 2-1 2-1v2h5l1 1 1 1 2 1v4l-1 3v2l1 1-1 3h0l-1 2-4 4zM566 278l-6 2-2 1-3 2-3-2v-1l-1-3 1-4 1-3-1-5v-5h10v1l2 2v5l1 2-1 3v2l1 2 1 1zM446 5l10-3 8 1 4-2h28l15 3-5 2h-24l1 1 9-1 8 2 5-2 1 2-3 2 7-2 13-1 7 1 1 1-11 3-1 1h-9 6l-3 3-3 2-1 4 3 3h-4l-5 1 5 2v3h-3l3 3-6 1 3 1-1 1-4 1h-4l3 2v2l-6-2-1 1 4 1 3 2 1 3-6 1-2-1-3-3 1 3-4 2h12l-9 3-8 3-9 1h-3l-4 2-5 3-7 3h-2l-4 1-4 1-3 2-1 3-2 2-6 3 1 3-2 3-3 3h-4l-4-3h-6l-3-2-1-3-4-5-1-2 1-3-3-3 2-3-2-1 4-5 5-1 2-1 2-3-4 1-2 1h-3l-3-1 1-2 2-2h2l6 1-4-3-2-1-3 1-2-1 4-4-1-1-1-2-2-4-3-2 1-1-6-2h-20l-2-1-4-2 8-2h6l-11-1-5-1 1-2 11-1 11-2 2-1-6-2 3-1 11-2 4-1V8l7-1 8-1h8l2 1 8-2 5 2h3l5 1-5-2 1-1zM683 266h-1v-3l-2-2v-5h-2 0l-2 1 1 1v2l-2 2-1 2-2 1-3-2h-2v1l-2 1v1h-3l-1-1h-2l-2 1-1-1-2-2v-1l-3 1-1 1-1 4h-1l-1 1v-1l-1-1-1-1 1-1v-2l-2-2-1-1v-1l-1-1v-2l-1-2h-1v-1l1-1v-2l1-1-1-1 1-2 2-3 3 1-1-14v-2h4v-7h42l1 3-1 1 1 4 1 4 2 1 2 1-2 2-3 1-1 1v2l-1 6v4l-2 4-2 1-1 3v1l-2 1-1 4v1zM629 65l-3 2 1 3-5 2-5 4-2 5 2 2 4 2-3 4-3 1-1 6-1 3h-4l-2 3h-4l-1-3-3-4-2-6 1-2 2-2 1-4-2-2v-5l1-3h3l1-2-1-1 4-5 3-4 2-2h3v-2h6v-2h2l4 2 5 2 1 5 1 2-5 1zM849 124l4-1 5-3 4-2 3 1h4l3 2h3l5 1 2-2-2-3 2-3 4 1 3 1 5 1 1 2 5 2 3-1h8l3 2 3 2h8l2-1h4l4-3 2 1 2 1 4-1v3l-1 4 1 1h5l2-1 4 1 4 3v1h-8l-2 1-1 2-5 2-2 2-4-1h-2l-1 2 2 1 1 1-2 2-2 2-4 1h-5l-5 1-3 2-2-1h-4l-5-2-4-1-4 1-7-1h-4l-3-2-2-3-2-1-5-2h-5l-4-1-1-2v-4l-4-3-5-1-3-2-2-2zM519 247l-2-2-2-3-3-1-1-1h-2l-2 1h-2l-1 1v-2l1-2v-10l-1-2-2-1 1-2h14l-1-5 1-2h3l1-9h11v-5l13 8h-5l1 16 2 15v3h-15v1h-3l-3-1-1 1-1 2h-1zM991 336h-2l-4-3h3l2 1 1 1v1zm13-1l-3 1h0v-2l2-2 3-1 1 1v1l-3 2zm-23-7l2 1h2l1 1-4 1h-5l1-2h2l1-1zm18 0v2l-6 1h-4v-2h2l3 1 2-1 3-1zm-50-5l7 1v-2l7 2 1 2 5 1 5 2-5 1-3-1h-7l-4-1-4-1-2-1-2 1-6-2-1-1h-3l3-4h4l3 2h1l1 1zm93-2l-2 3v-4l1-1 1 1v1zm-27-9l-1 1-2-1-1-1 4-1v2zm12-2l1 3-3-1-3-1h-4l1-2h4l4 1zm13-7l1 6 4 2 3-4 4-2h3l3 2 3 1 4 1-1 11-1 12-2-3-4-1-1 1h-5l2-3 2-1v-4l-2-3-7-3h-2l-6-3-1 2h-1l-1-1v-2l-3-2 4-1h3v-1h-6l-1-2-3-1-2-1 5-1 2-1 6 1v1zm-32-9l-2 4h-16v3l3 3 2-1 7-2-1 2h-1l-2 2-3 1 3 5v1l3 4v2l-2 1-2-1 2-3-3 2-1-1v-2l-2-2v-3l-2 1v9h-2l-2-1 1-3v-3h-2l-1-3 2-2v-3l2-5 1-2 3-2 3 1h8l4-3v1zm13 1v3h-2l-1 2 2 2h-1l-2-2-1-4 1-3 1-1v1l2 1 1 1zm-39-2l4 3h-4l-1 3v3l-3 3-1 3-1 6-1-2-4 2-1-2h-3l-1-2-5 2-1-2h-5l-1-5-1-1-2-3-1-3 1-4 2-2 1 2 2 3 2-1h3l2-2h1l4 1 3-1 1-5 2-1 1-4h4l3 1-2 3 3 3-1 2zm-43 27h-4l-3-3-4-3-2-2-3-3-1-2-3-5-3-3-1-3-1-3-4-2-2-4-2-2-4-3-1-2h3l5 1 4 3 2 2 2 2 4 4h3l3 2 2 3 3 2-1 3 2 1h1l1 3 1 2h2l2 2-1 5v5zM542 107l1 3-3 3-5 2h-5l3-4-2-4 5-3 2-1 1 2-1 2h4zM930 261l-2-1-2-4-1-4 2-3 4-1h4l3 2 1-3 3 2 1 2v4l-5 3 1 2-3 1-3 1-3-1zM1000 148l1 1h-1l-1 1-1 1 1 3h-1l-1 1-1 1-2 1-1 1 1 1-1 1h2l2 2v1h-3l-1 2h-2 0l-2-1v1h-1v-1h-2v-2h1l-1-1v-3h-2l-2-1 2-2 3-2 1-3 2 1 3 1-1-2 5-2v-2l3 2z" fill="var(--map)"/>
+            <path d="M935 248l1-1v-3l-4-3v-4l-3-3h-3v1h-4l-3 2-1-3 1-4h-3v-2l-2-1 1-2 3-2v1h2l-1-4 2-1 2 3 2 3h4l2 3-2 1-1 2 5 2 3 4 3 3 3 3 1 2-1 4-3-2-1 3-3-2zM685 181h-1 0-1l1-2 2-3h1l1 1-2 2-1 2z" fill="var(--map)"/>
+            <path d="M942 223l-5 3-2 3-1 2 4 4 3 5 4 2 2 3 3 6v7l-3 2-4 2-3 3-4 4-1-3v-2l-2-2 3-1 3-1-1-2 5-3v-4l-1-2 1-4-1-2-3-3-3-3-3-4-5-2 1-2 2-1-2-3h-4l-2-3-2-3 1-1h6l3-2 2 1 3 1v2l2 2 4 1zM1155 358h-1l-1-1v-1l2 2zm-1-6v3h-2v-4l2 1z" fill="var(--map)"/>
+            <path d="M951 233l-3 2-3-2v-3l1-1 4-1h2l1 1-1 2-1 2zm28-111l6 1 5 3 3 3h5l3-1 4-1v8l-1 3h-4l-2 1 2 3 1 4h-1v2l-3-2v2l-5 2 1 2-3-1-2-1-1 3-3 2-2 2-4 1-2 2-4 1 2-2-2-1 2-3-2-2-3 2-3 2-1 2-3 1-1 1 2 3h3l1 2 3 1 3-3 3 2h2l2 2-5 1-1 2-3 1-1 3 4 2 3 3 3 4 3 2v3l-2 1 2 2 2 1v6h-2l-2 4-2 5-2 4-4 3-5 3-3 1-2 1-2-1-1 2-5 2h-4v4h-2l-2-2 1-2-5-1-1 1-4-1-2-2v-2l-3-1-2-1-3 2h-6l-1 1-2 1 1 4h-2v-1l-1-2-2 2-2-1-3-1 1-3-2-1-2-3h-3v-4l2-3v-3l-1-3-1-1-2-2-2 1-4-1 1-1-2-3-2 2-3-1-4 2-2 3h-3l-2-1h-6l-2 3-1-3-2 1h-4l-4-1-3-2h-3l-1-2-2-1-4-2-3-1-1 1-5-3-4-2-2-4 3 1v-2l-2-2v-3l-5-4-6-2-1-2-3-2-1-1-1-2v-1l-2-1h-1l-2-3 1-1v-1l3-2h5l1-2h4l1-2 5-2v-3l2-1-5-6 6-1 2-1v-6l7 1 2-2-1-3 2-1 2-2h1l2 2 3 2 5 1 4 3v4l1 2 4 1h5l5 2 2 1 2 3 3 2h4l7 1 4-1 4 1 5 2h4l2 1 3-2 5-1h5l4-1 2-2 2-2-1-1-2-1 1-2h2l4 1 2-2 5-2 1-2 2-1h8v-1l-4-3-4-1-2 1h-5l-1-1 1-4v-3l5 2 3-2-1-2 2-4 1-1-1-2-2-1 2-2h7l6 1 3 1 4 4 2 1 2 2 3 4z" fill="var(--map-active)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M294 300l-2-1-2-1h-4v-2h-1l-4-2v-1h1v-2l1-1h2l1-3 2-1-2-1 1-2-1-4 1-1v-3l-2-1 1-2h1l1-1-1-2v-1l2 1 3-3h1v-2l1-3 2-1h3v-1h3l3-1 1-1 2-2h1l1 1-1 1-2 1-1 2-2 1-1 1v3l-1 2h2v2h1v2l-1 1 1 1h0l1 1h7l2 4 2-1h4l2 1-1 1-1 2v5l1 1h1l-2 2 1 1 1 1 1 4h-1v-2l-1-1-2 1h-6v2l2 1v1h-3v3l1 1 1 2v2l-2 10-1-2h-1l2-4-3-2-2 1-1-1-2 1-3-1-2-3-2-1-1-2-2-2-1 1zM828 173l5 4v3l2 2v2l-3-1 2 4 4 2 5 3-2 1-1 4 4 1 3 2 5 2h5l2 2h3l4 1h3v-1l-1-2v-2l2-1 1 3v1l4 1h8v-2l-2-2h3l2-3 4-2 3 1 2-2 2 3-1 1 4 1 1 1-1 1v2l-2-1-4 3v2l-1 3v1l-1 3h-3v3l-1 1 1 2-2 1-2-6h-1v2l-3-1 1-2 2-1 1-3h-5l-4-1v-2h-2l-3-2-1 3 3 1-2 2-1 1 2 1v2l2 3 1 3-1 1h-2l-4 1v2l-1 3-5 2-4 4-2 2-4 3 1 1-2 1-3 2h-2l-1 2 1 5 1 3-2 3 1 6-2 1-1 2 1 1-4 1-1 3-1 1-4-3-1-5-2-4-1-2-2-3-2-5v-2l-4-5-2-7-1-4-1-4-1-4-5 2h-2l-5-4 1-2-1-1-4-3 2-2h8l-1-3-3-2v-3l-3-2 4-3h4l3-4 1-3 3-4v-3l2-2-3-1-1-3-2-3 2-1h9l2-3zM717 171l3 1v2l-1 2-1 2 3 4 4 2 2 2v3h1v2l2 2h-2l-2-1-2 4-7-1-10-7-5-2-5-1-1-5 7-3 1-5-1-2 2-1 1-2 2-1 4 1 1 1 2-1 2 4z" fill="var(--map)"/>
+            <path d="M818 167l3 2 1 2 6 2-2 3h-9l-2 1 2 3 1 3 3 1-2 2v3l-3 4-1 3-3 4h-4l-4 3 3 2v3l3 2 1 3h-8l-2 2-3-1-1-3-3-2h-12l-5 1 1-4 5-2-1-2h-1l-1-3-3-2-2-2-2-2 6 2 3-1 3 1v-1h3l4-1v-3l1-2h3v-1l3-1 1 1 1-1v-2l1-3h2l-2-3h3l1-1v-1l1-2v-2l-1-1 1-2h4l4-1 1-1h2zM329 233l1 1h1l-1 1h-5v-1l1-1h3zM643 172l2 1h5v1h2v1h-5v-1h-4v-2zm9-21l-1 2-1 1h-2l-2-1-4 1 3 2-2 1h-2l-2-2v3l2 2h-1l2 2 2 1v2l-2-1h-1l1 2h-2l1 4h0l-1-2h-1v2l-1-1h0v-2h-1v2l-1-1v-2h0l-1-1h0l-1-1h1v-1h4-5l-1-2h-1v-1l-1-1-1-1 2-2v-1h1v-1l2-1h3l1-1h3l3-1 2 1h3v-2l2 1zM243 250h-4l-1-1-2-1v-2h0v-1l2-3h5v-1h-1v-1l-1-1-2-1h2v-2h7v3l-1 4h3l-1 2-2 1h0v1l-1 1h-1v1h0l-2 1h0z" fill="var(--map)"/>
+            <path d="M686 152l5 1h7l4-2h4l3 2 1 1v2l2 1 2 1-3 1 2 4-1 1 3 3-2 1-1-1-4-1-2 1h-5l-4 2h-3l-2-1-3 1-2-1v3l-1 1-2-2 2-1h-3l-2-1-3 2-5 1-3-2h-3l-1 1-2 1-4-2h-4l-2-4-2-2 1-3-2-1 3-4h5l2-3 6 1 4-2 4-1h5l6 2zm-32 2l-3 2-1-1v-1l1-1 1-2-2-1 3-1 3 1 1 1 3 1-1 1h-4l-1 1zM343 261h3v2l-3 1-1-1 1-1v-1z" fill="var(--map)"/>
+            <path d="M696 180l-7 4-4-1h0l1-1-1-1 1-2 2-2-1-1h-1l-1-3 1-1 1-1v-3l2 1 3-1 2 1h3l4-2h5l-1 2-2 1 1 2-1 5-7 3zM674 394l-1 2h-2l-2-2v-1l1-1 1-1h2l1 2v1zM746 167l3-1 2-2h6l4 2h3l4 3h3v8l-1 2 2 1-2 2 2 3v2l3 1 1 2-3 3 2 2 2 2 3 2 1 3h1l1 2-5 2-1 4-7-1-4-1h-4l-1-5h-5l-3 2-4-1-4-3-4-1-2-3-3-5-2 1-2-2-2 2-2-2v-2h-1v-3l-2-2-4-2-3-4 1-2 1-2v-2l-3-1-2-4-3-3 1-1-2-4 3-1v1l2 2h4l4-2 1-1 1 1-1 2 2 2h1l2 2 3 1 2 2 5 1 6-1v-1zM519 62l-1 3 3 2-4 3-9 2-3 1-3-1-9-1 3-1-6-2 5-1v-1l-6-1 3-2 4-1 5 3 4-2 4 1 5-2h5zM519 247h1l1-2 1-1 3 1h3v-1h15v-3l-2-15-1-16h5l12 8 12 8v2l3 1h1v2h4v8l-2 3v2h-3l-5 1-1 1h-5l-1-1-2 1-3 1-1 2-2 1-1 1-1 1-2-1-1 1v3l-3 3v1l-1 1v2l-1 1h-1l-1-1h-1 0l-1 1h-4 0l-1-1v-1l-1-1v1-1l1-1-2-2v-1l-1-1h-1l-1 1h-1l-1 1h-1l-1-1h-2 0l-1-1 1-1-1-1-1-1-1-3v-2zM912 227l-1 2h-3l-1 4-2 1 3 3 2 2 2 3-1 3h-1l1 2 2 3 1 2v2l1 3-1 3-2 4v-3l1-2-2-3v-3l-1-2-2-5-1-4-2-3-2 2-4 2h-2l-2-1 1-4-1-4-3-4v-1h-2l-3-3-1-3h2l-1-2 2-1-1-2 1-1v-3h3l1-3v-1l1-3v-2l4-3 2 1v-2l1-1-1-1 2-1 2 2 1 1 1 3v3l-2 3v4h3l2 3 2 1-1 3 3 1 2 1 2-1 1 1-3 2-1 2h-2z" fill="var(--map)"/>
+            <path d="M145 104l-1-1-2-2 1-3-2-3v-3h-8l-3-1-4-4-2-1-5-1h-4l-5-1-3-2-4 1-1 2-2 1h-4l-4 2h-4l1-2 4-3 5-1-1-1-5 2-4 2-6 3 1 1-5 3-5 1-4 2-2 1-6 2-2 2-5 1h-2l-3 1-4 1-4 1-6 1h0l4-2 4-1 5-2h4l3-2 6-2 1-1 3-1 3-3 3-2-4 1h-1l-3 1v-2l-2 1v-1l-4 1h-2l1-2 2-1-1-2-5 1-1-2h-1l1-2-1-2 3-2 5-2 2-2h5l4-1h1l4-1 1-2h-1l3-2h-2l-4 1-1 1-2-1h-8v-2l-2-2 6-1 8-2h3l-3 2 7-1v-2l-3-1v-2l-1-1-3-2 4-1 5-1 6-1 2-2 5-2h3l8-2 2 1 6-2 4 1v1l2-1 5 1h-1l4 1h3l5 1h5l2 1 4-1 4 1 2 1-12 13-15 20h3l2 1 1 2 1 2 5-2 4-1v2l1 1 2 2v3l1 4 4 2-1 2-3 2zm194 28l-2-1h-2l-1-1-3 3-2 3-1 1-2 1h-1v1h-12l-1 1-4 2v2l-3 1h-7v2l-3 2-3 1h-2l-2 1-3 1h-1l-2-1 1-2 1-1 2-2 1-1v-2l-2-1-2 2h-1v-1l3-2v-3l-2-1-2-1-1 1-1 1-1 2v-2l-2 1-1 1-1 2-1 2 1 2-1 2-2 2v1h-3 0v-6l1-2 2-2 2-3h0l-3 2h-1l2-1 3-3h2l3-1 2 1h1l3-1-2-1h-2v-1h-3l-3 1-2-2h-2l2-2-4 1-3 1-3 1-1-1-4 1v-1l3-1 3-2 4-1-4-1-3 1-3-1-3-1h-2l-1-1v-2h-1v2h-91v3l-1 3h-1l-1-3-4-1v2l-1 3-1 5-2 3-1 4-3 3v3l-1 3-1 3 1 2-1 3 2 3 1 1v1l1 5 2 3v2l1 1h3l1 1h2v1l1 1 2 2v1h8l5 2 7 3h10v-2h6l1 1 1 2 2 1 1 2v2l2 1 3 1 2-3h3l2 2 2 2 1 2 1 2 1 3v1l3 2h3v-3l1-2 1-2 2-1 4-2 3-3 3-1h2l3 1h3l2 2h3l1-1h2l-1-1 1-1-1-1 2-1h9l2 1 2 2h0l4-2 1 1 3 3v2l-1 2 1 1 1 3 1 3 1 1 1 2h3l1-3v-1l1-2-2-5 1-1-1-3-1-3v-2l1-3 2-2 2-1 4-3 1-1 2-1 1-1 3-2 4-1 2-2 1-4-1-1h0v-4l-2-1 2 1v-3l1-1v3l1 1-1 3h0l2-3 2-1v-2h-1v-2h1v1l1 1 3-3 1-3h-1l1-1v1h2l5-2h-6l3-1h3l3-1 2 1 2-1 1-1-1-1v1h-2v-3l1-1 2-2 4-1 4-2 3-1v-2l-2-2 2-4zM80 93h-2l-3 1-1 2 1 1 4-1 4-2-1-1h-2zM45 75l3-1h0l-2-1-1 2zm1 9l-4 1 1 1h4l1-2h-2zm94 22l-3 1-1-1-1 1-1 2 1 1 1 2 1 1h1l-1-3 3-4zM13 225l-1-1v1h0v1h2v-1h-1zm-3-1h2-2 0zm6 4h0l-2-1h0v1l-1 1h0v2l1 1v-1h2l1-1h0v-1l-1-1zm-8-6H7v1h0l1 1h0l1-1-1-1h0zm-6-2h0v1h1v-1H2z" fill="var(--map-active)" stroke="#3C3C3C" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M363 407l2-1 4 3h1l4 2 3 2 2 3-1 2 1 2-1 2-4 2-2-1h-2l-4-1h-2l-2-2v-10l1-3zM614 218l-2 1-2-2-6-1-1-3-3-1h-2l-1-1v-2l-2-3 1-1v-10l-1-4h2v-3l2-2 1-1 2-1v-3l4 2 1-1 3 1 5 1 1 4h4l5 2 3 2 2-1 2-2-1-3 1-2 2-1 2-1 5 1 1 2h3l3 1 1 1-1 2 1 1-1 2 1 3v13l1 13v7h-4v2l-14-7-14-7-4 2zM557 182l-1-4v-2l-1-2h-2l-3-1h-3l-2-1h-3l-1 2-2 4-3 1-3 2-3 2v2l-2 3 1 5-3 3-2 1-2 2h-4l-1 2h15v0-4l6-3 3-1 3-1 1-1 5-2v-2l2-1 1-1 5-1v-1l-1-1zM713 241v-1l-1-2-1-1-1-1-2-3-2-3-2-3h-2l-2-4-1-2v-2l-2-4-2-1-2-1-1-2v-1l-1-2-1-1-1-2-3-3-2-3h-1v-4h4l2-1v-1l3-1 1-1h1l-4-4 7-2h0l5 1 5 2 10 7 7 1h3l1 2h2l2 3 2 1v1l3 1v3l1 1 1 1v1l1 1 1 1h1l1 1v1l1 3 11 2 1-1 2 3-2 7-11 4-10 1-3 2-2 3-2 1-1-1h-5v-1h-4l-1 1-2-1-1 1 1 2-2 1zM1138 337l1 1h-3l-1-2h2l1 1zm-4-3h-5l1-2 2 1h1l1 1zm3-1l-1 1-2-3-1-2h1l1 3 2 1zm-6-4v1l-3-2-2-1-1-1 1-1 1 1 3 2 1 1zm-8-4l-1 1-2-1-1-2h0l2 1 2 1z" fill="var(--map)"/>
+        </svg>
+        <div class="pointer hawk">
+          <img class="animal-img"src="../../assets/images/hawk.jpg" alt="hawk">
+          <div class="pointer-content">
+            <img class="pointer-animal-img"src="../../assets/images/eagle.jpg" alt="eagle">
+            <div class="pointer-text">
+              <h3 class="pointer-title">West End Bald Eagle</h3>
+              <div class="p-s"><span class="pointer-subtitle">Region: </span><span>on an island Los Angeles</span></div>
+              <div><span class="pointer-subtitle">Population: </span><span>more than 270 pairs in 2013</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pointer alligator">
+          <img class="animal-img"src="../../assets/images/alligator.jpg" alt="alligator">
+          <div class="pointer-content">
+            <img class="pointer-animal-img"src="../../assets/images/alligator.jpg" alt="alligator">
+            <div class="pointer-text">
+              <h3 class="pointer-title">West End Bald Eagle</h3>
+              <div class="p-s"><span class="pointer-subtitle">Region: </span><span>on an island Los Angeles</span></div>
+              <div><span class="pointer-subtitle">Population: </span><span>more than 270 pairs in 2013</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pointer monkey">
+          <img class="animal-img"src="../../assets/images/monkey.jpg" alt="monkey">
+          <div class="pointer-content">
+            <img class="pointer-animal-img"src="../../assets/images/monkey.jpg" alt="monkey">
+            <div class="pointer-text">
+              <h3 class="pointer-title">West End Bald Eagle</h3>
+              <div class="p-s"><span class="pointer-subtitle">Region: </span><span>on an island Los Angeles</span></div>
+              <div><span class="pointer-subtitle">Population: </span><span>more than 270 pairs in 2013</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pointer panda">
+          <img class="animal-img"src="../../assets/images/panda.jpg" alt="panda">
+          <div class="pointer-content">
+            <img class="pointer-animal-img"src="../../assets/images/panda.jpg" alt="panda">
+            <div class="pointer-text">
+              <h3 class="pointer-title">West End Bald Eagle</h3>
+              <div class="p-s"><span class="pointer-subtitle">Region: </span><span>on an island Los Angeles</span></div>
+              <div><span class="pointer-subtitle">Population: </span><span>more than 270 pairs in 2013</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../zoos/panda/index.html" class="watch-button">watch online</a>
+    </div>
+  </section>
+  </main>
+  <footer class="footer" id="notif">
+    <div class="footer-wrapper">
+      <div class="footer-main">
+        <div class="footer-left">
+          <a class="footer-left-logo" href="./index.html">
+            <img class="footer-left-logo-img"src="../../assets/icons/logo-light.svg" alt="logo">
+          </a>
+          <form class="form" id="form">
+            <h3 class="form-title">Contact us</h3>
+            <input class="name-input" type="text" value="" required placeholder="Name" required>
+            <input class="email-input" type="email" value="" required placeholder="Email" required>
+            <fieldset class="comment">
+              <legend>Please enter your message</legend>
+              <textarea name="comment" class="comment-textarea" placeholder="" required maxlength="280"></textarea>
+            </fieldset>
+            <label class="checkbox-container">
+              <input type="checkbox" required id="checkbox">
+              <span class="form-checkbox"></span>
+              <label for="checkbox" class="checkbox-label">I agree to the processing of Personal Data</label>
+            </label>
+            <button type="submit" class="send-button">send</button>
+          </form>
+        </div>
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li class="footer-nav-item">
+              <a href="#">About</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../zoos/panda/index.html">Zoos</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../map/index.html">Map</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp?node-id=0%3A1">Design</a>
+            </li>
+          </ul>
+          <div class="address">
+            <p class="address-title">ZOO Online Centre</p>
+            <p class="address-address">132, Address District, Street</p>
+            <p class="address-hours">Open Daily 10:00 am - 5:00 pm</p>
+            <p class="address-phone">T<a href="tel:7021633433">(702) 163-3433</a></p>
+            <a class="address-email" href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+            <ul class="socials-footer">
+              <li class="socials-footer-item">
+                <a href="https://instagram.com"><img src="../../assets/icons/inst.svg" alt=""></a>
+              </li>
+              <li class="socials-footer-item">
+                <a href="https://twitter.com"><img src="../../assets/icons/twitter.svg" alt=""></a>
+              </li>
+              <li class="socials-footer-item">
+                <a href="https://vk.com"><img src="../../assets/icons/vk.svg" alt=""></a>
+              </li>
+              <li class="socials-footer-item">
+                <a href="https://youtube.com"><img src="../../assets/icons/youtube.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="usuall-button">donate for volunteers<a>
+      <div class="footer-bottom">
+        <p class = "footer-bottom-link"><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">©Noora Sagnayeva</a></p>
+        <p class = "footer-bottom-link"><a href="https://rs.school/">©RSSchool and ©Yem Digital - 2021</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
